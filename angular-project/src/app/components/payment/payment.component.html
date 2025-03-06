@@ -1,0 +1,108 @@
+<div class="container my-5">
+    <div class="row">
+        <h2>Checkout</h2>
+
+    </div>
+    <div class="row justify-content-between">
+        <div class="col-12 col-md-4">
+            <p class="fw-bold my-3">Payment</p>
+
+            <div class="d-flex flex-row gap-2 col-9">
+                
+                <div class="bg-light d-flex flex-grow-1 w-50 ">
+                    <button class="btn btn-outline-primary rounded-0 w-100 fw-bold fst-italic" ><i class="bi bi-paypal"></i>Pay<span class="text-info">Pal</span></button>
+                 </div>
+                <button class="btn btn-dark rounded-0 flex-grow-1 w-50">Pay on Delivery</button>
+            </div>
+            <p class="fs-5 my-4">Payment Details</p>
+            <div class="creditcard">
+
+                <div class="cardName d-flex flex-column">
+                    <input class="mb-2 py-2 ps-3" placeholder="Cardholder Name" type="text">
+                    <input class="mb-2 py-2 ps-3" placeholder="Card Number" type="text">
+                </div>
+               
+
+                <div class="cardexpiry d-flex flex-row gap-3">
+
+                    <select [(ngModel)]="selectedMonth"  class=" flex-fill w-25 py-2 ps-3" >
+                        <option value="" disabled>Month</option>
+     
+                       <option *ngFor="let m of months" [value]="m.id">{{m.name}}</option>
+
+                    </select>   
+                    
+                    <select [(ngModel)]="selectedYear" class="flex-fill w-25 py-2 ps-3">
+                        <option value="" disabled >Year</option>
+     
+                       <option *ngFor="let y of years" [value]="y">{{y}}</option>
+
+                    </select> 
+
+                    <input placeholder="CVC" type="text" class=" flex-fill w-25 py-2 ps-3">
+
+                </div>
+
+            </div>
+            <div class="savedata d-flex flex-row my-3 align-items-center justify-content-between">
+              
+              <div>Save card data for future payments</div>  
+                <input type="checkbox">
+            </div>
+
+            <button class="btn btn-dark rounded-0 w-100 p-2">Pay with card</button>
+        </div>
+        <div class="col-12 col-md-6">
+            <p class="fs-5 my-0">Your cart</p>
+
+                @for (item of productsInCart; track item.id){
+                    <div class="product row mt-5 mb-2 justify-content-between">
+                        <div class="col-md-4 col-12">
+                            <img [src]="item.img" class=" w-100 align-self-start my-2">
+                        </div>
+                        <div class="col-6">
+                            <h5>{{item.name}}</h5>
+                            <p class="fs-6">Quantity: {{item.quantity}}</p>
+                            <h5>{{ item.price | currency:'EGP':'code':'1.0-0' }}</h5>
+                        </div>
+                        <div class="col-2 align-self-end container">
+                            <button class="btn btn-link text-dark" (click)="removeFromCart(item.id)">Remove</button>
+                        </div>
+    
+                    </div>
+                    @if(item!==productsInCart[productsInCart.length-1]){
+                        <hr class="w-100">
+                    } 
+
+                }
+              
+                <div class="receipt d-flex flex-column align-items-center">
+                    <input type="text" placeholder="Enter coupon code" class="ps-3 py-2 w-75 my-5" #coupon>
+                    <button class="btn btn-dark rounded-0 w-25 p-2" (click)="handleDisc(coupon.value)">Apply coupon</button>
+                  <div class="w-100 d-flex flex-column align-items-center my-4">
+                    <div class="d-flex  justify-content-between w-75">
+                        <p>Subtotal</p>
+                        <p> {{ calculateTotal() | currency:'EGP':'code':'1.0-0' }}</p>
+
+                    </div>
+
+                    <div class="d-flex  justify-content-between w-75">
+                        <p>Discount%</p>
+                        <p> -{{ discount | currency:'EGP':'code':'1.0-0' }}</p>
+
+                    </div>
+                  <div class="bg-dark w-75" style="height: 1px;"></div>
+
+                  
+                  <div class="d-flex  justify-content-between w-75">
+                    <p>Total</p>
+                    <p> {{ finalTotal | currency:'EGP':'code':'1.0-0' }}</p>
+
+                </div>
+                  </div>
+                   
+                </div>
+        </div>
+
+    </div>
+</div>

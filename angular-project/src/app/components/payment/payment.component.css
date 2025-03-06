@@ -1,0 +1,4 @@
+select{
+    content: attr(placeholder);
+    color: gray;
+  }
