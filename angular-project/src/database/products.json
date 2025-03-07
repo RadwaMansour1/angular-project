@@ -1,0 +1,499 @@
+{
+  "products": [
+    {
+      "id": "101",
+      "name": "Lenovo ThinkPad X1",
+      "category": "Laptops & Computers",
+      "rating": 4,
+      "price": 25000,
+      "quantity": 30,
+      "imageUrl": "assets/my_images/laptop1.jpg",
+      "description": "An ultra-lightweight and powerful business laptop, featuring a 14-inch 2.8K OLED or WUXGA display with excellent color accuracy. It is powered by Intel’s 13th Gen Core processors, delivering high-speed performance and efficiency. The carbon fiber and magnesium alloy chassis makes it durable yet lightweight. It includes Dolby Atmos-tuned speakers for immersive audio. With up to 32GB RAM and 2TB SSD storage, it ensures seamless multitasking. The ThinkShield security suite, including a fingerprint reader and webcam privacy shutter, enhances security. Its long battery life and rapid charging make it ideal for professionals on the go."
+    },
+    {
+      "id": "102",
+      "name": "Apple MacBook Air M2",
+      "category": "Laptops & Computers",
+      "rating": 5,
+      "price": 32000,
+      "quantity": 30,
+      "imageUrl": "assets/my_images/laptop2.avif",
+      "description": "A sleek and powerful ultrabook with a 13.6-inch Liquid Retina display, offering vibrant colors and sharp details. It is powered by Apple’s M2 chip, ensuring fast performance and energy efficiency. The fanless design keeps it silent while maintaining excellent thermals. With up to 24GB unified memory and 2TB SSD storage, it handles multitasking with ease. It features a 1080p FaceTime HD camera, MagSafe charging, and Thunderbolt 4 ports for versatile connectivity. The Magic Keyboard with Touch ID enhances security and usability. Its all-day battery life makes it perfect for students, professionals, and travelers."
+    },
+    {
+      "id": "103",
+      "name": "Dell XPS 13",
+      "category": "Laptops & Computers",
+      "rating": 4,
+      "price": 28000,
+      "quantity": 20,
+      "imageUrl": "assets/my_images/laptop3.jpg",
+      "description": "A premium ultrabook with a 13.4-inch InfinityEdge display, available in Full HD+ or 4K resolution. Powered by Intel’s 12th Gen Core processors, it delivers high efficiency and performance. The thin and lightweight aluminum chassis makes it stylish and portable. It features Iris Xe integrated graphics, making it capable of handling creative work and light gaming. The comfortable keyboard and large trackpad enhance usability. It includes Thunderbolt 4 ports for high-speed connectivity. With up to 32GB RAM and 2TB SSD storage, it offers excellent multitasking capabilities. Its long battery life and premium build quality make it a top choice for professionals."
+    },
+    {
+      "id": "104",
+      "name": "HP Spectre x360",
+      "category": "Laptops & Computers",
+      "rating": 4,
+      "price": 29000,
+      "quantity": 20,
+      "imageUrl": "assets/my_images/laptop4.avif",
+      "description": "A premium 2-in-1 convertible laptop with a 13.5-inch or 16-inch OLED touchscreen display, offering vibrant colors and deep contrasts. Powered by Intel’s 13th Gen Core processors, it provides strong performance for work and creativity. It includes an HP Tilt Pen, making it great for note-taking and digital drawing. The sleek aluminum chassis gives it a premium feel, and the 360-degree hinge allows flexible usage modes. With Bang & Olufsen-tuned speakers, it delivers immersive audio. Thunderbolt 4 ports, Wi-Fi 6E, and a fingerprint scanner enhance connectivity and security. The long battery life makes it ideal for on-the-go productivity."
+    },
+    {
+      "id": "105",
+      "name": "ASUS ROG Zephyrus",
+      "category": "Laptops & Computers",
+      "rating": 3,
+      "price": 35000,
+      "quantity": 20,
+      "imageUrl": "assets/my_images/laptop5.avif",
+      "description": "A powerful gaming laptop featuring a 14-inch QHD+ 165Hz display for ultra-smooth gameplay. It is powered by AMD Ryzen 9 processors and NVIDIA GeForce RTX 40-series GPUs, delivering top-tier gaming performance. The compact and lightweight design makes it one of the most portable gaming laptops. With up to 32GB RAM and 1TB SSD storage, it ensures fast load times and seamless multitasking. The AniMe Matrix LED display on the lid adds a customizable aesthetic. Dolby Atmos-tuned speakers provide immersive sound. The strong battery life and USB-C charging make it great for both gaming and content creation."
+    },
+    {
+      "id": "106",
+      "name": "Acer Swift 3",
+      "category": "Laptops & Computers",
+      "rating": 3,
+      "price": 22000,
+      "quantity": 30,
+      "imageUrl": "assets/my_images/laptop6.jpg",
+      "description": "A budget-friendly ultrabook featuring a 14-inch Full HD IPS display with thin bezels. It is powered by Intel’s 12th Gen Core i5/i7 or AMD Ryzen 5000-series processors, providing solid everyday performance. The lightweight aluminum chassis makes it portable and stylish. With up to 16GB RAM and 1TB SSD storage, it handles multitasking smoothly. The backlit keyboard and precision touchpad enhance usability. It includes Wi-Fi 6 and USB-C for fast connectivity. The fingerprint reader adds an extra layer of security. With long battery life and fast charging, it’s an excellent choice for students and professionals."
+    },
+    {
+      "id": "201",
+      "name": "Apple iPad Pro 12.9",
+      "category":"Tablets",
+      "rating": 4,
+      "price": 35000,
+      "quantity": 20,
+      "imageUrl": "assets/my_images/tablet1.jpg",
+      "description": "A high-performance tablet designed for professionals and creatives. It features a Liquid Retina XDR display with stunning color accuracy and ProMotion technology for smooth scrolling. Powered by the Apple M2 chip, it delivers exceptional speed and efficiency for multitasking, gaming, and content creation. The iPadOS enhances productivity with features like Stage Manager and Apple Pencil support. It comes with a dual-camera system and LiDAR scanner for advanced AR experiences. The Thunderbolt/USB 4 port ensures fast data transfer and connectivity. With up to 2TB of storage, all-day battery life, and 5G support, it’s perfect for professionals on the go."
+    },
+    {
+      "id": "202",
+      "name": "Samsung Galaxy Tab S9",
+      "category":"Tablets",
+      "rating": 3,
+      "price": 28000,
+      "quantity": 30,
+      "imageUrl": "assets/my_images/tablet2.jpg",
+      "description": "A premium Android tablet featuring a 11-inch Dynamic AMOLED 2X display with a 120Hz refresh rate for ultra-smooth visuals. Powered by the Qualcomm Snapdragon 8 Gen 2 processor, it delivers top-tier performance for multitasking, gaming, and creative tasks. The S Pen comes included, offering precise writing and drawing capabilities. With an IP68 rating, it is water and dust resistant, making it durable for various environments. The dual-speaker system tuned by AKG provides immersive audio. It supports 5G connectivity, fast charging, and up to 1TB expandable storage, making it a powerful device for work and entertainment."
+    },
+    {
+      "id": "203",
+      "name": "Microsoft Surface Pro 9",
+      "category":"Tablets",
+      "rating": 4,
+      "price": 32000,
+      "quantity": 20,
+      "imageUrl": "assets/my_images/tablet3.avif",
+      "description": "A versatile 2-in-1 laptop with a 13-inch PixelSense Flow display featuring a 120Hz refresh rate for smooth visuals. Powered by Intel’s 12th Gen Core processors or Microsoft SQ3 with 5G support, it offers excellent performance for work and creativity. With Windows 11, it provides a seamless PC experience with touchscreen functionality. The removable SSD allows for expandable storage options. It supports the Surface Slim Pen 2, making it ideal for note-taking and digital art. The built-in kickstand offers flexible viewing angles. With all-day battery life, Thunderbolt 4 ports, and a lightweight design, it’s perfect for professionals on the go."
+    },
+
+    {
+      "id": "301",
+      "name": "iPhone 15 Pro Max",
+      "category":"Smart Phones",
+      "rating": 5,
+      "price": 120000,
+      "quantity": 25,
+      "imageUrl": "assets/my_images/smartphone1.avif",
+      "description": "Most advanced smartphone, featuring a 6.7-inch Super Retina XDR display with ProMotion for smooth 120Hz refresh rates. It is powered by the A17 Pro chip, offering exceptional performance and energy efficiency. The titanium frame makes it lighter yet more durable. It introduces a 5x telephoto zoom camera, improving long-range photography. With ProRAW and ProRes video recording, it’s perfect for creatives. The Action Button replaces the mute switch for customizable functions. It includes USB-C for faster data transfer and long battery life, making it the ultimate premium iPhone."
+    },
+    {
+      "id": "302",
+      "name": "iPhone 15",
+      "category":"Smart Phones",
+      "rating": 4,
+      "price": 100000,
+      "quantity": 25,
+      "imageUrl": "assets/my_images/smartphone2.avif",
+      "description": "Features a 6.1-inch Super Retina XDR display with vibrant colors and HDR support. Powered by the A16 Bionic chip, it offers excellent performance for gaming and multitasking. The new Dynamic Island replaces the notch, providing an interactive experience. It introduces a 48MP main camera, enabling high-resolution photos and 2x optical zoom. The USB-C port replaces Lightning for universal charging. It comes with improved battery life and a durable aluminum and glass design. With iOS 17 features and enhanced Night mode, it delivers a premium experience at a more affordable price."
+    },
+    {
+      "id": "303",
+      "name": "iPhone 14 Pro",
+      "category":"Smart Phones",
+      "rating": 5,
+      "price": 95000,
+      "quantity": 25,
+      "imageUrl": "assets/my_images/smartphone3.avif",
+      "description": "Features a 6.1-inch Super Retina XDR display with a 120Hz refresh rate for smooth performance. It introduces the Dynamic Island, replacing the notch with an interactive UI element. Powered by the A16 Bionic chip, it delivers high-speed performance and energy efficiency. The 48MP main camera allows for detailed photos and ProRAW support. It includes Always-On Display for quick notifications at a glance. The Crash Detection and Emergency SOS via satellite enhance safety. With all-day battery life and iOS updates, it remains a powerful choice for users."
+    },
+    {
+      "id": "304",
+      "name": "iPhone 14",
+      "category":"Smart Phones",
+      "rating": 4,
+      "price": 85000,
+      "quantity": 25,
+      "imageUrl": "assets/my_images/smartphone4.avif",
+      "description": "Comes with a 6.1-inch Super Retina XDR display, delivering vibrant visuals and HDR support. Powered by the A15 Bionic chip, it ensures fast and efficient performance. It features a dual-camera system with a 12MP main sensor, improving low-light photography. The Crash Detection and Emergency SOS via satellite add safety features. With an improved front camera with autofocus, selfies and video calls look sharper. The battery life is extended for all-day use. It retains the classic design with a Ceramic Shield front and aluminum body, making it a reliable and durable choice."
+    },
+    {
+      "id": "305",
+      "name": "iPhone 13",
+      "category":"Smart Phones",
+      "rating": 4,
+      "price": 80000,
+      "quantity": 25,
+      "imageUrl": "assets/my_images/smartphone5.jpg",
+      "description": "Features a 6.1-inch Super Retina XDR display, offering bright and crisp visuals. Powered by the A15 Bionic chip, it delivers smooth performance for everyday use. The dual-camera system with sensor-shift stabilization enhances photography and video quality. The Cinematic Mode adds a professional touch to videos with automatic focus shifting. It includes 5G connectivity for faster browsing and streaming. The longer battery life ensures a full day of use on a single charge. With iOS support for years, it remains a future-proof choice for users."
+    },
+    {
+      "id": "306",
+      "name": "Samsung Galaxy S23 Ultra",
+      "category":"Smart Phones",
+      "rating": 5,
+      "price": 110000,
+      "quantity": 25,
+      "imageUrl": "assets/my_images/smartphone7.avif",
+      "description": "A flagship powerhouse with a 6.8-inch Dynamic AMOLED 2X display and a 120Hz refresh rate for ultra-smooth performance. Powered by the Snapdragon 8 Gen 2 for Galaxy, it offers top-tier speed and efficiency. The 200MP main camera delivers exceptional detail and low-light performance. With 100x Space Zoom, it captures distant subjects with clarity. The built-in S Pen enhances productivity for note-taking and creativity. It features a massive 5,000mAh battery with fast charging. One UI and Samsung DeX provide a seamless and desktop-like experience."
+    },
+    {
+      "id": "307",
+      "name": "Samsung Galaxy Z Fold 5",
+      "category":"Smart Phones",
+      "rating": 4,
+      "price": 130000,
+      "quantity": 25,
+      "imageUrl": "assets/my_images/smartphone8.avif",
+      "description": "A premium foldable smartphone with a 7.6-inch Dynamic AMOLED 2X inner display and a 6.2-inch outer display, both with a 120Hz refresh rate. Powered by the Snapdragon 8 Gen 2 for Galaxy, it delivers powerful multitasking performance. The new hinge design makes it slimmer and more durable. It supports S Pen input, enhancing productivity and creativity. The triple-camera system captures stunning photos and videos. With improved battery life and IPX8 water resistance, it’s built for everyday use. Its flex mode and multi-window support make it a game-changer for professionals and power users."
+    },
+    {
+      "id": "401",
+      "name": "Apple Watch Series 9",
+      "category":"Smart Watches",
+      "rating": 4,
+      "price": 18000,
+      "quantity": 25,
+      "imageUrl": "assets/my_images/smartwatch1.avif",
+      "description": "Features a brighter Always-On Retina display, making it more visible in sunlight. Powered by the S9 chip, it delivers faster performance and improved battery efficiency. The new Double Tap gesture allows hands-free control for answering calls and navigating apps. It includes advanced health tracking, such as blood oxygen monitoring, ECG, sleep tracking, and temperature sensing. The Crash Detection and Fall Detection features enhance safety. With watchOS 10, it offers redesigned apps and widgets for better usability. Its carbon-neutral design makes it Apple’s most eco-friendly smartwatch yet."
+    },
+    {
+      "id": "402",
+      "name": "Samsung Galaxy 6",
+      "category":"Smart Watches",
+      "rating": 4,
+      "price": 15000,
+      "quantity": 30,
+      "imageUrl": "assets/my_images/smartwatch2.jpg",
+      "description": "Features a vibrant 1.3-inch or 1.5-inch Super AMOLED display with a slim bezel for a sleek look. Powered by the Exynos W930 processor, it offers improved speed and efficiency. It runs on Wear OS 4 with Samsung’s One UI Watch, providing seamless integration with Android devices. The watch includes advanced sleep tracking, heart rate monitoring, ECG, and body composition analysis. With Galaxy AI-powered health insights, it helps optimize fitness goals. The enhanced battery life and fast charging ensure all-day usability. It supports Google Assistant, Samsung Pay, and LTE connectivity for standalone use."
+    },
+    {
+      "id": "403",
+      "name": "Garmin Fenix 7",
+      "category":"Smart Watches",
+      "rating": 5,
+      "price": 25000 ,
+      "quantity": 25,
+      "imageUrl": "assets/my_images/smartwatch3.avif",
+      "description": "A rugged multisport smartwatch designed for athletes and adventurers. It features a 1.3-inch always-on sunlight-readable display with a durable sapphire or solar-powered glass option. The built-in GPS, altimeter, barometer, and compass provide precise navigation. It includes advanced fitness tracking, VO2 max, heart rate monitoring, and recovery insights. The multi-band GNSS support enhances outdoor tracking accuracy. With up to 18 days of battery life (or longer with solar charging), it’s built for endurance. The watch supports topographic maps, music storage, and contactless payments, making it ideal for outdoor enthusiasts."
+    },
+    {
+      "id": "404",
+      "name": "Fitbit Sense 2",
+      "category":"Smart Watches",
+      "rating": 4,
+      "price": 12000,
+      "quantity": 25,
+      "imageUrl": "assets/my_images/smartwatch4.avif",
+      "description": "A premium health-focused smartwatch featuring an AMOLED touchscreen display with an always-on mode. It includes continuous EDA (Electrodermal Activity) monitoring to track stress levels. The heart rate sensor, ECG app, SpO2 tracking, and sleep monitoring provide in-depth health insights. With built-in GPS and 40+ exercise modes, it’s great for fitness tracking. The watch supports Google Wallet, Alexa, and notifications for productivity. It has 6+ days of battery life with fast charging. Water-resistant up to 50 meters, it’s designed for everyday wear and wellness tracking."
+    },
+    {
+      "id": "405",
+      "name": "Huawei Watch GT 4",
+      "category":"Smart Watches",
+      "rating": 4,
+      "price": 14000,
+      "quantity": 30,
+      "imageUrl": "assets/my_images/smartwatch5.jpg",
+      "description": "features a sleek AMOLED display with ultra-thin bezels for a premium look. It offers dual-band GPS for accurate positioning, making it great for outdoor activities. The advanced TruSeen 5.5+ heart rate monitoring ensures precise health tracking. With over 100 workout modes, it supports various fitness goals. The watch provides detailed sleep and SpO2 tracking for comprehensive wellness insights. It boasts up to 14 days of battery life, far surpassing many competitors. With HarmonyOS, it offers smart notifications and app support while maintaining excellent battery efficiency."
+    },
+
+    {
+      "id": "501",
+      "name": "Sony WH-1000XM5",
+      "category": "Head Phones",
+      "rating": 4,
+      "price": 25000,
+      "quantity": 30,
+      "imageUrl": "assets/my_images/headphones1.jpg",
+      "description": "Premium over-ear noise-canceling headphones featuring industry-leading ANC powered by dual processors and eight microphones. They deliver exceptional audio quality with Sony’s Integrated Processor V1 and 30mm drivers for rich, detailed sound. The Adaptive Sound Control automatically adjusts noise cancellation based on surroundings. With 30 hours of battery life and fast charging, they provide all-day listening. The lightweight, redesigned frame ensures superior comfort. The Speak-to-Chat feature automatically pauses music when you start talking. Multipoint connectivity allows seamless switching between two devices."
+    },
+    {
+      "id": "502",
+      "name": "Bose QuietComfort 45",
+      "category": "Head Phones",
+      "rating": 4,
+      "price": 23000,
+      "quantity": 30,
+      "imageUrl": "assets/my_images/headphones2.jpg",
+      "description": "High-performance over-ear headphones known for their exceptional noise cancellation. Featuring Quiet and Aware modes, users can switch between full noise isolation or ambient sound awareness. The TriPort acoustic architecture ensures deep, balanced audio with rich bass. With up to 24 hours of battery life on a single charge, they are perfect for long listening sessions. Comfortable ear cushions and a lightweight design make them ideal for extended wear. They support Bluetooth 5.1 and multipoint connectivity for smooth device switching. USB-C fast charging provides quick power-ups when needed."
+    },
+    {
+      "id": "503",
+      "name": "Apple AirPods Max",
+      "category": "Head Phones",
+      "rating": 5,
+      "price": 40000,
+      "quantity": 30,
+      "imageUrl": "assets/my_images/headphones3.jpg",
+      "description": "Luxury over-ear headphones designed with a custom acoustic design and computational audio. They feature Apple’s H1 chip in each ear cup for seamless connectivity and adaptive EQ. The Active Noise Cancellation (ANC) and Transparency mode offer superior sound isolation and environmental awareness. With spatial audio and dynamic head tracking, they deliver an immersive experience. The memory foam ear cushions and stainless steel frame provide premium comfort. They offer 20 hours of battery life with fast charging via Lightning. The digital crown allows precise volume and playback control."
+    },
+    {
+      "id": "504",
+      "name": "Sennheiser Momentum 4",
+      "category": "Head Phones",
+      "rating": 4,
+      "price": 28000,
+      "quantity": 35,
+      "imageUrl": "assets/my_images/headphones4.jpg",
+      "description": "Headphones deliver audiophile-grade sound with 42mm drivers for deep bass and crystal-clear treble. The adaptive noise cancellation adjusts to ambient sound for an uninterrupted experience. With an insane 60-hour battery life, they outperform most competitors. The soft-touch memory foam earpads and lightweight design ensure long-lasting comfort. The touch controls and voice assistant support provide easy operation. They support Bluetooth 5.2 with aptX Adaptive for high-quality wireless streaming. Multipoint connectivity allows seamless switching between two devices."
+    },
+    {
+      "id": "505",
+      "name": "JBL Tune 760NC",
+      "category": "Head Phones",
+      "rating": 3,
+      "price": 15000,
+      "quantity": 35,
+      "imageUrl": "assets/my_images/headphones5.jpg",
+      "description": "Affordable over-ear headphones with Active Noise Cancellation for immersive listening. They feature JBL Pure Bass Sound, delivering powerful and deep bass. With up to 50 hours of battery life (ANC off) and 35 hours with ANC on, they offer extended listening. Fast charging provides 2 hours of playback with just a 5-minute charge. The lightweight foldable design makes them travel-friendly. They support multipoint connectivity, allowing easy switching between devices. The built-in microphone and voice assistant support enhance convenience for calls and commands."
+    },
+    {
+      "id": "506",
+      "name": "Beats Studio Pro",
+      "category": "Head Phones",
+      "rating": 4,
+      "price": 27000,
+      "quantity": 35,
+      "imageUrl": "assets/my_images/headphones6.jpg",
+      "description": "Headphones offer high-fidelity sound with custom 40mm drivers, delivering deep bass and clear mids. Featuring Active Noise Cancellation (ANC) and Transparency mode, they adapt to different environments. With Spatial Audio and head tracking, they provide an immersive listening experience. The soft vegan leather ear cushions ensure comfort during long sessions. They deliver up to 40 hours of battery life (ANC off) and 24 hours with ANC on, with fast charging via USB-C. They support lossless audio over USB-C and multipoint connectivity for seamless switching between devices."
+    },
+
+    {
+      "id": "601",
+      "name": "Sony PlayStation 5",
+      "category":"Games & Console",
+      "rating": 5,
+      "price": 50000,
+      "quantity": 35,
+      "imageUrl": "assets/my_images/img01.avif",
+      "description": "A powerful next-gen console featuring a custom AMD Ryzen Zen 2 processor and RDNA 2 GPU, delivering 4K gaming at up to 120Hz with ray tracing support. Its ultra-fast SSD significantly reduces load times for seamless gameplay. The DualSense controller introduces haptic feedback and adaptive triggers for a more immersive experience. The PS5 supports 3D audio technology, enhancing spatial sound in games. With backward compatibility, it plays most PS4 games. It comes in both Standard and Digital Editions, with the latter lacking a disc drive. Exclusive titles like Spider-Man 2 and God of War: Ragnarök showcase its capabilities."
+    },
+    {
+      "id": "602",
+      "name": "Microsoft Xbox Series X",
+      "category":"Games & Console",
+      "rating": 4,
+      "price": 48000,
+      "quantity": 35,
+      "imageUrl": "assets/my_images/img02.avif",
+      "description": "Microsoft's most powerful gaming console, equipped with a custom AMD Zen 2 processor and RDNA 2 GPU, delivering true 4K gaming at 120FPS with ray tracing. Its 1TB NVMe SSD and Quick Resume allow near-instant game switching. The Xbox Game Pass subscription offers access to a vast library of games. The backward compatibility supports four generations of Xbox titles. Dolby Vision and Dolby Atmos enhance the visual and audio experience. The compact monolithic design provides efficient cooling for quiet operation. Cloud gaming support lets users play on multiple devices."
+    },
+    {
+      "id": "603",
+      "name": "Nintendo Switch OLED",
+      "category":"Games & Console",
+      "rating": 4,
+      "price": 30000,
+      "quantity": 30,
+      "imageUrl": "assets/my_images/img03.jpg",
+      "description": "A hybrid gaming console featuring a 7-inch OLED display that provides richer colors and higher contrast. It functions as both a portable handheld and a docked home console for TV play. The improved kickstand offers better tabletop gaming support. With 64GB of internal storage (expandable via microSD), it allows for more game downloads. The enhanced speakers deliver better audio quality. It retains the versatile Joy-Con controllers, supporting motion controls and multiplayer gaming. Titles like The Legend of Zelda: Tears of the Kingdom and Super Mario Odyssey showcase its vibrant gameplay."
+    },
+    {
+      "id": "604",
+      "name": "Steam Deck",
+      "category":"Games & Console",
+      "rating": 3,
+      "price": 35000,
+      "quantity": 30,
+      "imageUrl": "assets/my_images/img04.jpg",
+      "description": "A powerful handheld gaming PC designed by Valve, featuring a custom AMD APU with Zen 2 CPU and RDNA 2 GPU, delivering console-quality gaming on the go. It runs SteamOS and supports thousands of PC games via Steam and third-party launchers. The 7-inch LCD touchscreen provides a smooth 60Hz gaming experience. It includes trackpads and full-size controls for precise input. With expandable storage via microSD, users can install large game libraries. The customizable performance settings let players optimize battery life and frame rates. Docking support enables play on external monitors."
+    },
+    {
+      "id": "605",
+      "name": "Meta Quest 3 VR",
+      "category":"Games & Console",
+      "rating": 4,
+      "price": 40000,
+      "quantity": 30,
+      "imageUrl": "assets/my_images/img05.avif",
+      "description": "A cutting-edge standalone VR headset featuring higher resolution displays and a faster Snapdragon XR2 Gen 2 processor for improved graphics and performance. It offers full-color passthrough mixed reality, allowing users to blend virtual and real-world experiences. The advanced hand tracking and redesigned controllers enhance interactivity. With improved comfort and a slimmer design, it provides a better fit for extended use. The library includes immersive VR games like Beat Saber and Resident Evil 4 VR. It supports PC VR gaming via Oculus Link, offering high-end VR experiences without external sensors."
+    },
+    {
+      "id": "701",
+      "name": "Smart Iron",
+      "category": "Pressing Irons",
+      "rating": 5,
+      "price": 5000,
+      "quantity": 15,
+      "imageUrl": "assets/my_images/iron1.avif",
+      "description": "An advanced ironing device equipped with intelligent temperature control and steam regulation for different fabric types. It features automatic shut-off for safety and anti-drip technology to prevent water stains. Some models include Wi-Fi or Bluetooth connectivity, allowing users to control settings via a smartphone app. The built-in sensors adjust heat and steam based on the fabric, preventing burns or damage. With self-cleaning functions, it ensures long-lasting performance. The ergonomic design and lightweight body make it comfortable to use. Some models also offer voice control compatibility for added convenience."
+    },
+    {
+      "id": "702",
+      "name": "Vertical Steam Iron",
+      "category": "Pressing Irons",
+      "rating": 4,
+      "price": 7000,
+      "quantity": 15,
+      "imageUrl": "assets/my_images/iron2.avif",
+      "description": "A designed for quick and efficient wrinkle removal without the need for an ironing board. It produces powerful steam bursts, making it ideal for hanging garments, curtains, and upholstery. With a large water tank and continuous steam function, it smooths out fabric quickly. The lightweight and portable design ensures ease of use. It is safe for delicate fabrics like silk, chiffon, and wool. Many models feature fast heating technology, ready to use in seconds. The anti-drip and anti-calc system prevents water stains and mineral buildup."
+    },
+    {
+      "id": "703",
+      "name": "Travel Iron",
+      "category": "Pressing Irons",
+      "rating": 4,
+      "price": 3000,
+      "quantity": 15,
+      "imageUrl": "assets/my_images/iron3.avif",
+      "description": "A compact and lightweight ironing device designed for travelers and professionals on the go. It typically features dual voltage compatibility, making it usable worldwide. The foldable handle or collapsible design makes it easy to pack in a suitcase. Despite its small size, it offers steam and dry ironing options for effective wrinkle removal. The non-stick soleplate ensures smooth gliding over fabrics. With fast heat-up technology, it’s ready for use within minutes. Some models include a retractable cord for convenience and a travel pouch for easy storage."
+    },
+    {
+      "id": "704",
+      "name": "Cordless Iron",
+      "category": "Pressing Irons",
+      "rating": 4,
+      "price": 6000,
+      "quantity": 20,
+      "imageUrl": "assets/my_images/iron4.jpg",
+      "description": "Provides maximum flexibility and ease of use without the hassle of tangled cords. It features a powerful rechargeable base that heats the iron quickly and maintains optimal temperature for uninterrupted ironing. The lightweight and ergonomic design ensures comfortable handling. With steam and dry ironing modes, it works on a variety of fabrics. Some models include auto shut-off for safety, preventing overheating. The non-stick ceramic or stainless steel soleplate glides smoothly over clothes. Many models also offer fast reheating on the charging base, ensuring efficient ironing sessions."
+    },
+    {
+      "id": "801",
+      "name": "Top-Load",
+      "category": "Washing Machines",
+      "rating": 4,
+      "price": 15000,
+      "quantity": 20,
+      "imageUrl": "assets/my_images/washing-machine1.jpg",
+      "description": "A convenient and easy-to-use appliance where clothes are loaded from the top. It features a central agitator or impeller for effective cleaning. These machines are faster in wash cycles compared to front-loaders and allow users to add clothes mid-cycle. They are generally more affordable and lightweight, making them ideal for small spaces. Many models come with multiple wash programs and water level adjustments. The high-speed spinning ensures efficient water removal. Modern top-load washers also feature energy-saving and quick-wash options for convenience."
+    },
+    {
+      "id": "802",
+      "name": "Front-Load",
+      "category": "Washing Machines",
+      "rating": 5,
+      "price": 20000,
+      "quantity": 20,
+      "imageUrl": "assets/my_images/washing-machine2.jpg",
+      "description": "Is known for its efficient cleaning performance and water-saving design. It features a horizontal drum rotation that tumbles clothes gently but effectively. These machines use less water and detergent compared to top-loaders. They are energy-efficient, with advanced features like steam wash, inverter motors, and smart connectivity. The high-speed spin cycle reduces drying time significantly. With a larger drum capacity, front-load washers handle bulky loads easily. They operate quieter and are ideal for households looking for gentle fabric care and superior stain removal."
+    },
+    {
+      "id": "803",
+      "name": "Fully Automatic",
+      "category": "Washing Machines",
+      "rating": 5,
+      "price": 25000,
+      "quantity": 20,
+      "imageUrl": "assets/my_images/washing-machine3.avif",
+      "description": "Handles washing, rinsing, and spinning without manual intervention. Available in both top-load and front-load designs, it features one-touch operation with multiple wash programs. It automatically adjusts water levels, detergent usage, and wash time based on the load. Equipped with digital displays, smart sensors, and inverter technology, it ensures efficient cleaning with minimal effort. Many models come with quick wash, eco mode, and child lock features. These machines are ideal for busy households, offering superior convenience and fabric care."
+    },
+    {
+      "id": "804",
+      "name": "Washer Dryer Combo",
+      "category": "Washing Machines",
+      "rating": 4,
+      "price": 30000,
+      "quantity": 20,
+      "imageUrl": "assets/my_images/washing-machine4.jpg",
+      "description": "A 2-in-1 appliance that combines washing and drying functions in a single unit. It is perfect for small apartments and space-saving solutions. These machines use automatic drying cycles after washing, eliminating the need for a separate dryer. With advanced moisture sensors and heat pump technology, they ensure efficient drying with minimal fabric damage. The front-load design is common, offering gentle yet powerful cleaning. Many models support steam wash, smart connectivity, and energy-efficient drying options. While drying takes longer than dedicated dryers, it offers ultimate convenience for users."
+    },
+    {
+      "id": "901",
+      "name": "Double-Door Refrigerator",
+      "category": "Refrigerators",
+      "rating": 5,
+      "price": 25000,
+      "quantity": 25,
+      "imageUrl": "assets/my_images/refrigerator1.jpg",
+      "description": "Features two separate compartments, typically with a freezer on top and a refrigerator below, or in some models, a bottom freezer. It offers a larger storage capacity than single-door models, making it ideal for medium to large families. Equipped with frost-free cooling technology, it prevents ice buildup. The separate doors help in better temperature control and energy efficiency. Many models include adjustable shelves, toughened glass racks, and door alarms. With advanced inverter compressors, they ensure energy savings and low noise operation. Some models also come with smart connectivity and convertible freezer options."
+    },
+    {
+      "id": "902",
+      "name": "Side-by-Side Refrigerator",
+      "category": "Refrigerators",
+      "rating": 5,
+      "price": 40000,
+      "quantity": 25,
+      "imageUrl": "assets/my_images/refrigerator2.jpg",
+      "description": "Has two vertical doors, with the freezer on one side and the refrigerator on the other, offering easy access to both compartments. It is designed for larger families and provides ample storage space for fresh and frozen food. Featuring multiple shelves, door bins, and spacious vegetable crisper drawers, it allows efficient organization. Many models include water and ice dispensers, digital temperature controls, and multi-airflow cooling systems for uniform cooling. The sleek and modern design makes it a stylish addition to kitchens. It is energy-efficient and often comes with smart features like Wi-Fi connectivity and AI temperature management."
+    },{
+      "id": "1001",
+      "name": "DSLR Camera",
+      "category": "Cameras & Accessories",
+      "rating": 5,
+      "price": 50000,
+      "quantity": 25,
+      "imageUrl": "assets/my_images/camera1.avif",
+      "description": "A professional-grade camera known for its interchangeable lenses and optical viewfinder. It uses a mirror mechanism to reflect light into the viewfinder, providing a real-time preview. Equipped with large image sensors, DSLRs capture high-resolution photos with excellent depth and detail. They offer manual controls, fast autofocus, and superior low-light performance. Many models support 4K video recording and high-speed burst shooting for action shots. With a long battery life and durable build, DSLRs are ideal for photography enthusiasts and professionals. Brands like Canon and Nikon dominate the DSLR market."
+    },
+    {
+      "id": "1002",
+      "name": "Mirrorless Camera",
+      "category": "Cameras & Accessories",
+      "rating": 5,
+      "price": 60000,
+      "quantity": 25,
+      "imageUrl": "assets/my_images/camera2.avif",
+      "description": "A compact and lightweight alternative to DSLRs, featuring interchangeable lenses but without the bulky mirror mechanism. It uses an electronic viewfinder or LCD screen to display a live digital preview. With advanced autofocus systems, high-resolution sensors, and 4K/8K video recording, mirrorless cameras deliver professional-quality results. They excel in fast shooting speeds and silent operation, making them ideal for travel, portraits, and street photography. Many models include Wi-Fi and Bluetooth connectivity for quick file transfers. Leading brands like Sony, Fujifilm, and Canon offer top-tier mirrorless options."
+    },
+    {
+      "id": "1003",
+      "name": "Action Camera",
+      "category": "Cameras & Accessories",
+      "rating": 4,
+      "price": 30000,
+      "quantity": 25,
+      "imageUrl": "assets/my_images/camera3.jpg",
+      "description": "A compact, rugged, and waterproof camera designed for capturing high-intensity activities like sports, adventure, and travel. It features ultra-wide-angle lenses for immersive shots and supports 4K or higher video recording with stabilization for smooth footage. Built to withstand extreme conditions, many models are shockproof and dustproof. They are often mountable on helmets, bikes, and drones for hands-free recording. With Wi-Fi and mobile app integration, users can edit and share videos instantly. Brands like GoPro, DJI, and Insta360 dominate the action camera market."
+    },
+    {
+      "id": "1101",
+      "name": "Split Air Conditioner",
+      "category": "Air Conditioners",
+      "rating": 5,
+      "price": 35000,
+      "quantity": 25,
+      "imageUrl": "assets/my_images/air-conditioner1.jpg",
+      "description": "Consists of two main units: an indoor unit that cools the room and an outdoor unit that houses the compressor and condenser. It operates quietly and provides efficient cooling with adjustable temperature settings. Featuring inverter technology, many models offer energy savings and precise climate control. Split ACs come with air purification filters, dehumidifiers, and smart connectivity for remote operation via smartphones. They are ideal for homes, offices, and medium to large rooms. Installation requires wall mounting but ensures aesthetic appeal and minimal space usage."
+    },
+    {
+      "id": "1102",
+      "name": "Portable Air Conditioner",
+      "category": "Air Conditioners",
+      "rating": 4,
+      "price": 25000,
+      "quantity": 15,
+      "imageUrl": "assets/my_images/air-conditioner2.avif",
+      "description": "A compact and mobile cooling device that does not require permanent installation. It features wheels for easy movement and can be used in different rooms as needed. These units come with an exhaust hose that needs to be vented through a window or wall. They provide effective cooling for small to medium-sized spaces and often include dehumidification and fan modes. Many models have remote control, programmable timers, and energy-saving features. Portable ACs are perfect for renters, temporary setups, or areas where traditional AC installation is not possible."
+    },
+    {
+      "id": "1201",
+      "name": "Handheld Vacuum Cleaner",
+      "category": "Vacuum Cleaners",
+      "rating": 4,
+      "price": 8000,
+      "quantity": 15,
+      "imageUrl": "assets/my_images/cleanliness0.avif",
+      "description": "A compact and lightweight cleaning device designed for quick and convenient cleaning of small spaces. It is ideal for removing dust, pet hair, and debris from furniture, car interiors, and hard-to-reach areas. These vacuums are cordless or corded, with rechargeable models offering long battery life and portability. Many come with multiple attachments, such as crevice tools and brush heads, for versatile cleaning. With powerful suction and easy handling, they provide efficient cleaning on the go. Some models also include wet and dry functionality for added convenience."
+    },
+    {
+      "id": "1202",
+      "name": "Robotic Vacuum Cleaner",
+      "category": "Vacuum Cleaners",
+      "rating": 5,
+      "price": 35000,
+      "quantity": 15,
+      "imageUrl": "assets/my_images/cleanliness2.jpg",
+      "description": "A smart, autonomous cleaning device designed to vacuum floors with minimal human intervention. It uses sensors and AI navigation to map and clean rooms efficiently, avoiding obstacles and stairs. Many models support Wi-Fi connectivity and voice control via smart assistants like Alexa and Google Assistant. With automatic charging, the robot returns to its dock when the battery is low. Some models feature mopping functions for enhanced cleaning. Ideal for hard floors and carpets, robotic vacuums save time and effort, making them perfect for busy households and pet owners."
+    }
+  ]
+}
+
+
+

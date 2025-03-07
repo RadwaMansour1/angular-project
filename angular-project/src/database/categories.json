@@ -1,0 +1,79 @@
+{
+  "categories":[
+    {
+      "id": "1",
+      "name": "Laptops & Computers",
+      "imageUrl":"assets/my_images/laptop1.jpg",
+      "products": [ "101", "102", "103", "104", "105", "106"]
+    },
+    {
+      "id": "2",
+      "name": "Tablets",
+      "imageUrl": "assets/my_images/tablet1.jpg",
+      "products": ["201", "202", "203"]
+    },
+    {
+      "id": "3",
+      "name": "Smart Phones",
+      "imageUrl": "assets/my_images/smartphone1.avif",
+      "products": ["301", "302", "303", "304", "305", "306", "307"]
+    },
+    {
+      "id": "4",
+      "name": "Smart Watches",
+      "imageUrl": "assets/my_images/smartwatch1.avif",
+      "products": ["401", "402", "403", "404", "405"]
+    },
+    {
+      "id": "5",
+      "name": "Head Phones",
+      "imageUrl": "assets/my_images/headphones1.jpg",
+      "products": [ "501", "502", "503", "504", "505", "506" ]
+    },
+    {
+      "id": "6",
+      "name": "Games & Console",
+      "imageUrl": "assets/my_images/img01.avif",
+      "products": [ "601", "602", "603", "604", "605"]
+    },
+    {
+      "id": "7",
+      "name": "Pressing Irons",
+      "imageUrl": "assets/my_images/iron2.avif",
+      "products": [ "701", "702", "703", "704"]
+    },
+    {
+      "id": "8",
+      "name": "Washing Machines",
+      "imageUrl": "assets/my_images/washing-machine0.avif",
+      "products": [ "801", "802", "803", "804"]
+    },
+    {
+      "id": "9",
+      "name": "Refrigerators",
+      "imageUrl": "assets/my_images/refrigerator0.avif",
+      "products": [ "901", "902"]
+    },
+    {
+      "id": "10",
+      "name": "Cameras & Accessories",
+      "imageUrl": "assets/my_images/camera1.avif",
+      "products": [ "1001", "1002", "1003"]
+    },
+    {
+      "id": "11",
+      "name": "Air Conditioners",
+      "imageUrl": "assets/my_images/air-conditioner0.avif",
+      "products": [ "1101", "1102"]
+    },
+    {
+      "id": "12",
+      "name": "Vacuum Cleaners",
+      "imageUrl": "assets/my_images/cleanliness1.jpg",
+      "products": [ "1201", "1202"]
+    }
+  ]
+}
+
+
+
