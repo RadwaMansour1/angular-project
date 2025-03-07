@@ -1,0 +1,89 @@
+.card {
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  background-color: #ebeaea;
+  overflow: hidden;
+  color: #292828;
+  border: 2px solid #ebeaea;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-body {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 12px;
+}
+
+.card-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background-color: #292828;
+  color: #EFF2F6;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover .card-title {
+  color: #EFF2F6;
+}
+
+.card-body {
+  transition: color 0.3s ease;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.my-text {
+  margin-bottom: 70px ;
+  color: #363636;
+  margin-top: 25px;
+}
+
+h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+  color: #545353;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out, bounce 2s infinite alternate;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(5px);
+  }
+}
+

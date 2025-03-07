@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="header-container">
+  <h2 class="text-center my-text">{{ categoryName }} Products</h2>
+
+    <!-- Sorting Dropdown -->
+    <select class="form-select w-auto" [(ngModel)]="selectedSort" (change)="sortProducts()" style="  background-color: #ebeaea;">
+      <option value="popular">Popular</option>
+      <option value="topRated">Top Rated</option>
+      <option value="lowToHigh">Price: Low to High</option>
+      <option value="highToLow">Price: High to Low</option>
+    </select>
+  </div>
+  <div class="row gy-4">
+    <div class="col-lg-2 col-md-3 col-sm-6" *ngFor="let product of products">
+      <div class="card product-card" (click)="viewProductDetails(product)">
+
+        <!-- Product Image Container (with Hover Button) -->
+        <div class="image-container">
+          <img [src]="product.imageUrl" class="card-img-top" alt="{{ product.name }}">
+          <!-- <button class="btn btn-dark add-to-cart-btn" (click)="addToCart(); $event.stopPropagation()">Add to Cart</button> -->
+          <button class="btn btn-dark add-to-cart-btn" >Add to Cart</button>
+
+        </div>
+
+        <div class="card-body">
+          <h5 class="card-title">{{ product.name }}</h5>
+
+          <!-- Rating -->
+          <div class="rating" style="margin-top: 10px;">
+            <fa-icon *ngFor="let star of [1,2,3,4,5]" [icon]="faStar" [ngClass]="{ 'text-warning': star <= product.rating, 'text-muted': star > product.rating }"></fa-icon>
+          </div>
+          <p class="card-text my-p" style="margin-top: 10px; font-size: 1rem;">{{ product.price | currency:'EGP':'symbol' }}</p>
+
+          <!-- Favorite -->
+          <button class="btn btn-light favorite-btn" (click)="toggleFavorite(product); $event.stopPropagation()">
+            <fa-icon [icon]="faHeart" [ngClass]="{ 'text-danger': isFavorite(product.id) }" class="cursor-pointer"></fa-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

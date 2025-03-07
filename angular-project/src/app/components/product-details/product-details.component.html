@@ -1,0 +1,74 @@
+<div class="container product-card" >
+  <div class="container product-content">
+    <div class="row">
+      <!-- Product Image -->
+      <div class="col-md-6 ">
+        <img [src]="product?.imageUrl" class="img-fluid product-image" alt="{{ product?.name }}" >
+      </div>
+
+      <!-- Product Info -->
+      <div class="col-md-6">
+        <h2 style="color: #292828;;">{{ product?.name }}</h2>
+        <p class="price" style="margin-top: 9px;">{{ product?.price | currency:'EGP':'symbol' }}</p>
+
+        <!-- Rating -->
+        <div class="rating" style="margin-top: -11px; font-size: 0.8rem; margin-right: 2px; ">
+          <fa-icon *ngFor="let star of [1, 2, 3, 4, 5]" [icon]="faStar" [ngClass]="{ 'text-warning': star <= (product?.rating || 0), 'text-muted': star > (product?.rating || 0) }"></fa-icon>
+        </div>
+        <hr style="color: aliceblue;">
+
+        <!-- Product Description -->
+        <div class="product-description">
+          <h3 style="color: rgb(136, 11, 11); font-size: 17px;">DESCRIPTION</h3>
+          <p style="color: rgb(109, 112, 114);">{{ product?.description }}</p>
+        </div>
+        <hr style="color: aliceblue;">
+
+        <!-- Quantity Counter -->
+        <div class="quantity" style="margin-top: 10px; background-color: #EFF2F6; width: 160px; height: 45px; border-radius: 25px;">
+          <button (click)="decreaseQuantity()" >-</button>
+          <input type="text" [value]="quantity" readonly style="border: none; background-color: #EFF2F6;">
+          <button (click)="increaseQuantity()" >+</button>
+        </div>
+
+        <!-- Buttons -->
+        <div class="actions" style="margin-top: 22px;">
+          <button class="btn btn1" (click)="addToCart()">ADD TO CART</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabs Section -->
+    <div class="tabs mt-4">
+      <ul class="nav nav-tabs " style="cursor: pointer;">
+        <li class="nav-item" (click)="activeTab = 'details'">
+          <a class="nav-link" [ngClass]="{ 'active': activeTab === 'details' }" style="color: rgb(109, 111, 113);">DETAILS</a>
+        </li>
+        <li class="nav-item" (click)="activeTab = 'delivery'">
+          <a class="nav-link" [ngClass]="{ 'active': activeTab === 'delivery' }" style="color: rgb(109, 111, 113);">DELIVERY</a>
+        </li>
+        <li class="nav-item" (click)="activeTab = 'return'">
+          <a class="nav-link" [ngClass]="{ 'active': activeTab === 'return' }" style="color: rgb(109, 111, 113);">RETURN</a>
+        </li>
+      </ul>
+
+      <div class="tab-content p-3 border">
+        <div *ngIf="activeTab === 'details'">
+          <h4 style="color: rgb(136, 11, 11); font-size: 1.2rem;">Product Details</h4>
+          <p style="color: rgb(109, 112, 114);">{{ product?.description }}</p>
+        </div>
+
+        <div *ngIf="activeTab === 'delivery'">
+          <h4 style="color: rgb(136, 11, 11); font-size: 1.2rem;">Delivery Information</h4>
+          <p style="color: rgb(109, 112, 114);">Estimated delivery: 3-5 business days. Free shipping for orders over EGP 500.</p>
+        </div>
+
+        <div *ngIf="activeTab === 'return'">
+          <h4 style="color: rgb(136, 11, 11); font-size: 1.2rem;">Return Policy</h4>
+          <p style="color: rgb(109, 112, 114);">Returns are accepted within 14 days of delivery. Items must be unused and in original packaging.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
