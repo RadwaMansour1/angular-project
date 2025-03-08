@@ -4,12 +4,25 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { CartComponent } from './components/cart/cart.component';
 import { PaymentComponent } from './components/payment/payment.component';
+import { ProfileComponent } from './components/profileComponents/profile/profile.component';
+import { OrdersHistoryComponent } from './components/profileComponents/orders-history/orders-history.component';
+import { DashboardComponent } from './components/profileComponents/dashboard/dashboard.component';
+import { AccountInfoComponent } from './components/profileComponents/account-info/account-info.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 export const routes: Routes = [
   { path: 'products', component: CategoryListComponent },
   { path: 'products/:category', component: ProductListComponent },
   { path: 'products/:category/:productId', component: ProductDetailsComponent },
   {path:'cart',component:CartComponent},
-  {path:'payment',component:PaymentComponent}
-
+  {path:'payment',component:PaymentComponent},
+  {path:"login" ,component:LoginComponent},
+  {path:"register",component:RegisterComponent},
+  {path:"profile" ,component:ProfileComponent,title:"profile" ,children:[
+    {path:"" ,redirectTo:"dashboard" ,pathMatch:"full"},
+    {path:"dashboard" ,component:DashboardComponent, title:"dashboard"},
+    {path:"ordersHistory" ,component:OrdersHistoryComponent, title:"orders history"},
+    {path:"accountInfo" ,component:AccountInfoComponent, title:"account info"},
+]}
 ];

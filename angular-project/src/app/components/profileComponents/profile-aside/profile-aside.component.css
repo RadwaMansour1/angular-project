@@ -1,0 +1,15 @@
+.circular{
+    vertical-align: middle;
+    height: 20%;
+    width: 30%;
+    border-radius: 50%;
+}
+
+.selected{
+    background-color: rgba(18, 202, 226, 0.478);
+    color: white;
+}
+/* Ensure no conflicting styles */
+a {
+    transition: none; /* Remove any conflicting transitions */
+  }
