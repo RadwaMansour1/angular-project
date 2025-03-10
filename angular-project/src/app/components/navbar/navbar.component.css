@@ -1,0 +1,48 @@
+.sidebar{
+    position: fixed;
+    left: -2000px;
+    top: 0;
+    height: 100%;
+    width: 450px;
+    background-color: #EFF2F6;
+    box-shadow: 1px 0 15px rgba(0, 0, 0, 0.414);
+    transition: left 0.8s ease-in-out;
+    z-index: 100;
+}
+
+input::placeholder{
+    color: white;
+}
+
+.sidebar a{
+    text-align: center;
+}
+
+.sidebar.show{
+    left: 0;
+}
+
+@media (max-width:1200px) {
+
+    .bottom-nav{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: black;
+        color: white;
+        box-shadow: 1px 0 15px rgba(0, 0, 0, 0.414);
+        z-index: 400;
+        padding: 10px 0;
+    }
+  
+}
+
+.main-white{
+    background-color: #EFF2F6;
+}
+
+.active{
+    border: 0.5px solid white;
+    border-radius: 30px;
+}

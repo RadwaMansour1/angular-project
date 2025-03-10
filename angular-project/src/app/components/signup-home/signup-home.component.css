@@ -1,0 +1,11 @@
+.main-image{
+    position: relative;
+    height: 300px;
+    min-width: 100%;
+    border-radius: 20px;
+    background-size: cover;
+    filter: blur(3px);
+}
+
+
+

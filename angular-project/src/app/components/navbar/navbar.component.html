@@ -1,0 +1,94 @@
+<nav class="navbar navbar-expand-lg bg-black" style="z-index: 100;">
+    <div class="container-fluid mx-4">
+        <div class="d-flex flex-column justify-content-between align-items-center w-100">
+           <!-- For larger screens -->
+            <div class="d-none d-xl-flex justify-content-between align-items-center w-100">
+                <a class="nav-item" routerLink="/cart"> <i class="bi bi-search text-white" aria-current="page"></i> </a>
+                
+                <a routerLink="/home" class="navbar-brand fw-semibold ms-5 fs-2 text-white">Logo</a>         
+                <div class="d-flex gap-3">
+                    <a routerLink="/login" class="nav-link text-white" aria-current="page">Login</a>
+                    <div class="vr bg-white"></div>
+                    <a class="nav-item" routerLink="/cart"> <i class="bi bi-cart fs-5 text-white"></i> </a>
+                </div>
+            </div>
+
+            <!-- For smaller screens -->
+            <div class="d-flex d-xl-none flex-column align-items-center w-100 gap-3">
+                <div class="d-flex align-items-center justify-content-between w-100">
+                    <button class="btn btn-outline-light d-xl-none" (click)="toggleSidebar()">☰</button>
+                    <a class="fs-1 nav-link fw-semibold text-white" routerLink="/home">Logo</a>      
+                    <a class="nav-item" routerLink="/cart"> <i class="bi bi-cart fs-5 text-white"></i> </a>
+                </div>
+                <input class="form-control text-white bg-dark border-white" type="search" placeholder="Search..." aria-label="Search">
+            </div>
+
+           <!-- For larger screens -->
+            <div class="d-none d-xl-flex justify-content-around align-items-center w-100">
+                <ul class="navbar-nav gap-5 mt-4 text-center">
+                    <li class="nav-item"> <a class="nav-link text-white active " routerLink="/home"> <i class="bi bi-house"></i> Home</a> </li>
+                    <li class="nav-item"> <a class="nav-link text-white" routerLink="/aboutus"><i class="bi bi-people"></i> About us</a> </li>
+                    <li class="nav-item"> <a class="nav-link text-white" routerLink="/explore"><i class="bi bi-compass"></i> Explore</a> </li>
+                    <li class="nav-item"> <a class="nav-link text-white" routerLink="/support"><i class="bi bi-envelope"></i> Support</a> </li>
+                </ul>
+            </div>
+
+            <!-- For smaller screens -->
+            <div class="d-flex d-xl-none bottom-nav bg-black">
+                <ul class="navbar-nav flex-row gap-5 p-3 justify-content-center w-100 align-items-center text-center">
+                    <li class="nav-item"> <a class="nav-link text-white active py-2 px-4" routerLink="/home"> <i class="bi bi-house d-block"></i> Home</a> </li>
+                    <li class="nav-item"> <a class="nav-link text-white" routerLink="/aboutus"><i class="bi bi-people d-block"></i> About us</a> </li>
+                    <li class="nav-item"> <a class="nav-link text-white" routerLink="/explore"><i class="bi bi-compass d-block"></i> Explore</a> </li>
+                    <li class="nav-item"> <a class="nav-link text-white" routerLink="/support"><i class="bi bi-envelope d-block"></i> Support</a> </li>
+                </ul>
+            </div>
+
+            <!-- For larger screens -->
+            <div class="d-none d-xl-flex justify-content-around align-items-center px-5 py-2 rounded-5 mt-4 shadow-lg main-white">
+                <ul class="navbar-nav gap-5 text-center">
+                    <li class="nav-item"> <a class="nav-link text-dark" routerLink="/laptops">Laptops</a></li>
+                    <div class="vr d-none d-xl-block"></div>
+                    <li class="nav-item"> <a class="nav-link text-dark" routerLink="/monitors">Monitors</a> </li>
+                    <div class="vr d-none d-xl-block"></div>
+                    <li class="nav-item"> <a class="nav-link text-dark" routerLink="/laptopAccessories">Laptop Accessories</a> </li>
+                    <div class="vr d-none d-xl-block"></div>
+                    <li class="nav-item"> <a class="nav-link text-dark" routerLink="/accessories">Accessories</a> </li>
+                    <div class="vr d-none d-xl-block"></div>
+                    <li class="nav-item"> <a class="nav-link text-dark" routerLink="/offers">Offers</a> </li>
+                </ul>
+            </div>
+
+            <!-- For smaller screens -->
+            <div class="d-xl-none sidebar w-100 justify-content-between main-white" [class.show]="sidebaropen">
+                <div class="d-flex align-items-center w-100">
+                    <button class="btn btn-outline-dark m-3" (click)="toggleSidebar()"> X </button>
+                    <a class="fs-1 nav-link fw-semibold justify-content-center d-flex w-100 text-black" routerLink="/home">Logo</a>  
+                    <div class="m-3" style="width: 50px;"></div>
+                </div>
+                <a routerLink="/login" class="nav-link text-black" aria-current="page">Login</a>
+                <ul class="navbar-nav mt-4 w-100 px-3 d-flex flex-column">
+                    <li class="d-flex align-items-center justify-content-between px-2">
+                        <a class="nav-link text-dark" routerLink="/laptops">Laptops</a> 
+                        <i class="bi bi-arrow-right fs-5"></i>
+                    </li>
+                    <li class="d-flex align-items-center justify-content-between px-2">
+                        <a class="nav-link text-dark" routerLink="/monitors">Monitors</a> 
+                        <i class="bi bi-arrow-right fs-5"></i>
+                    </li>
+                    <li class="d-flex align-items-center justify-content-between px-2">
+                        <a class="nav-link text-dark" routerLink="/laptopAccessories">Laptop Accessories</a> 
+                        <i class="bi bi-arrow-right fs-5"></i>
+                    </li>
+                    <li class="d-flex align-items-center justify-content-between px-2">
+                        <a class="nav-link text-dark" routerLink="/accessories">Accessories</a> 
+                        <i class="bi bi-arrow-right fs-5"></i>
+                    </li>
+                    <li class="d-flex align-items-center justify-content-between px-2">
+                        <a class="nav-link text-dark" routerLink="/offers">Offers</a> 
+                        <i class="bi bi-arrow-right fs-5"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>  
+    </div>
+</nav>

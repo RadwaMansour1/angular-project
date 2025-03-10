@@ -1,0 +1,33 @@
+.category-parent,.product-parent{
+    background-color: white;
+}
+
+.category-parent{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.product-parent{
+    height: 500px;
+    position: relative;
+    width: 300px;
+}
+
+
+
+.category-parent img{
+    width: 80%;
+    height: 90%;
+}
+
+
+.product-card{
+    height: 35rem;
+    max-height: 600px;
+    width: 20rem;
+}
+
+a{
+    text-decoration: none;
+}

@@ -10,8 +10,10 @@ import { DashboardComponent } from './components/profileComponents/dashboard/das
 import { AccountInfoComponent } from './components/profileComponents/account-info/account-info.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { HomeComponent } from './pages/home/home.component';
 
 export const routes: Routes = [
+  {path:"", component:HomeComponent, title:"Home"},
   { path: 'products', component: CategoryListComponent },
   { path: 'products/:category', component: ProductListComponent },
   { path: 'products/:category/:productId', component: ProductDetailsComponent },
