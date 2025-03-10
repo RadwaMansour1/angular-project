@@ -1,4 +1,4 @@
-<div class="bg-primary-subtle rounded-4 d-flex flex-column d-none d-md-flex" style="height: 70vh; width: 90%;">
+<div class="bg-white rounded-4 d-flex flex-column d-none d-md-flex" style="height: 70vh; width: 90%;">
         <img src="assets/images/profile.jpg" alt="profile" class="circular align-self-center mt-3 mb-1">
         <p class="text-secondary m-0 text-center">Hello</p>
         <p class="fw-bold m-0 text-center">Jenny Wilson</p>
@@ -13,10 +13,7 @@
         <p class=" m-0 text-black" style="font-weight:400; font-size: 1.1rem;">Orders History</p>
    </a>
    
-   <a routerLink="accountInfo" routerLinkActive="selected" class="text-decoration-none rounded-5 p-2 w-75 d-flex align-items-center ms-4 my-2"
-   [@linkActive]="isActive ? 'active' : 'inactive'"
-   (routerLinkActive)="isActive = true" 
-   (routerLinkDeactive)="isActive = false">
+   <a routerLink="accountInfo" routerLinkActive="selected" class="text-decoration-none rounded-5 p-2 w-75 d-flex align-items-center ms-4 my-2">
         <img src="assets/images/profile/account.svg" class="me-2" style="width: 1.2rem;" alt="">
         <p class=" m-0 text-black" style="font-weight:400; font-size: 1.1rem;">Account Details</p>
    </a>
