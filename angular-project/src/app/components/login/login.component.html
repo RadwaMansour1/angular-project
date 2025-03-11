@@ -2,8 +2,8 @@
     <div class="p-4 m-4  bg-white">
         <h3>Sign In</h3>
         <p class="text-secondary">Login With Email</p>
-        <input type="text" placeholder="Email" class="w-100 px-2 py-1 ">
-        <input type="text" placeholder="Password" class="w-100 px-2 py-1 my-2">
+        <input type="text" [(ngModel)]="email" placeholder="Email" class="w-100 px-2 py-2 ">
+        <input type="text" [(ngModel)]="password" placeholder="Password" class="w-100 px-2 py-2 my-3">
         <div class="d-flex justify-content-between mb-4">
             <div class="d-flex">
                 <input type="checkbox" name="" id="" class="me-1 form-check-input border-1 border-secondary">
@@ -12,21 +12,24 @@
 
             <a href="#" class="text-secondary-emphasis text-decoration-none">Forget Password?</a>
         </div>
+        <div class="text-center my-4">
+            <Button class="btn btn-outline-primary py-2 px-4 w-50  border-primary rounded-3" (click)="handleLogin()">Sign In</Button>
+        </div>
         <div class="d-flex justify-content-center">
          <hr class="flex-grow-1 me-2">
          <p>OR</p>
          <hr class="flex-grow-1 ms-2">
         </div>
         <a href="#" class="text-decoration-none">
-            <div class="d-flex justify-content-center align-items-center w-100 border border-1 border-secondary-subtle  p-2 rounded-3">
+            <div class="d-flex justify-content-center align-items-center bg-primary w-100 border border-1 border-secondary-subtle  p-2 rounded-3">
                 <img src="assets/images/facebook.svg" class="me-2" style="height: 20%; width: 6%; " alt="">
-                <p class="text-secondary m-0">Continue with Facebook</p>
+                <p class="text-white m-0">Continue with Facebook</p>
             </div>
         </a>
         <a href="#" class="text-decoration-none">
-            <div class="d-flex justify-content-center align-items-center w-100 border border-1 border-secondary-subtle my-3 p-2 rounded-3">
+            <div class="d-flex justify-content-center align-items-center bg-danger w-100 border border-1 border-secondary-subtle my-3 p-2 rounded-3">
                 <img src="assets/images/google.svg" class="me-2" style="height: 20%; width: 6%; " alt="">
-                <p class="text-secondary m-0">Continue with Google</p>
+                <p class="text-white m-0">Continue with Google</p>
             </div>
         </a>
         <a href="#" class="text-decoration-none">
@@ -36,6 +39,6 @@
             </div>
         </a>
     </div>
-    <p>don't have account? <a href="#" class="text-primary text-decoration-none">sign up!</a></p>
+    <p>don't have account? <a routerLink="/register" class="text-primary text-decoration-none">sign up!</a></p>
     
 </div>

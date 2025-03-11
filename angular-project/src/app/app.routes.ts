@@ -6,7 +6,7 @@ import { CartComponent } from './components/cart/cart.component';
 import { PaymentComponent } from './components/payment/payment.component';
 import { ProfileComponent } from './components/profileComponents/profile/profile.component';
 import { OrdersHistoryComponent } from './components/profileComponents/orders-history/orders-history.component';
-import { DashboardComponent } from './components/profileComponents/dashboard/dashboard.component';
+import { ProfilePaymentComponent } from './components/profileComponents/payment/payment.component';
 import { AccountInfoComponent } from './components/profileComponents/account-info/account-info.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
@@ -22,8 +22,8 @@ export const routes: Routes = [
   {path:"login" ,component:LoginComponent},
   {path:"register",component:RegisterComponent},
   {path:"profile" ,component:ProfileComponent,title:"profile" ,children:[
-    {path:"" ,redirectTo:"dashboard" ,pathMatch:"full"},
-    {path:"dashboard" ,component:DashboardComponent, title:"dashboard"},
+    {path:"" ,redirectTo:"accountInfo" ,pathMatch:"full"},
+    {path:"payment" ,component:ProfilePaymentComponent, title:"payment&address"},
     {path:"ordersHistory" ,component:OrdersHistoryComponent, title:"orders history"},
     {path:"accountInfo" ,component:AccountInfoComponent, title:"account info"},
 ]}
