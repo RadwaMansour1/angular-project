@@ -1,0 +1,184 @@
+{
+  "coupons": [
+    {
+      "id": "1",
+      "code": "COUPON1A2B3C",
+      "discount": 15,
+      "valid": true
+    },
+    {
+      "id": "2",
+      "code": "COUPON4D5E6F",
+      "discount": 30,
+      "valid": true
+    },
+    {
+      "id": "3",
+      "code": "COUPON7G8H9I",
+      "discount": 25,
+      "valid": true
+    },
+    {
+      "id": "4",
+      "code": "COUPONJ1K2L3",
+      "discount": 50,
+      "valid": false
+    },
+    {
+      "id": "5",
+      "code": "COUPONM4N5O6",
+      "discount": 75,
+      "valid": true
+    },
+    {
+      "id": "6",
+      "code": "COUPONP7Q8R9",
+      "discount": 60,
+      "valid": true
+    },
+    {
+      "id": "7",
+      "code": "COUPONS1T2U3",
+      "discount": 45,
+      "valid": true
+    },
+    {
+      "id": "8",
+      "code": "COUPONV4W5X6",
+      "discount": 80,
+      "valid": true
+    },
+    {
+      "id": "9",
+      "code": "COUPONY7Z8A9",
+      "discount": 35,
+      "valid": true
+    },
+    {
+      "id": "10",
+      "code": "COUPONB1C2D3",
+      "discount": 20,
+      "valid": true
+    },
+    {
+      "id": "11",
+      "code": "COUPONE4F5G6",
+      "discount": 90,
+      "valid": true
+    },
+    {
+      "id": "12",
+      "code": "COUPONH7I8J9",
+      "discount": 55,
+      "valid": true
+    },
+    {
+      "id": "13",
+      "code": "COUPONK1L2M3",
+      "discount": 40,
+      "valid": true
+    },
+    {
+      "id": "14",
+      "code": "COUPONN4O5P6",
+      "discount": 70,
+      "valid": true
+    },
+    {
+      "id": "15",
+      "code": "COUPONQ7R8S9",
+      "discount": 65,
+      "valid": true
+    },
+    {
+      "id": "16",
+      "code": "COUPONT1U2V3",
+      "discount": 85,
+      "valid": true
+    },
+    {
+      "id": "17",
+      "code": "COUPONW4X5Y6",
+      "discount": 10,
+      "valid": true
+    },
+    {
+      "id": "18",
+      "code": "COUPONZ7A8B9",
+      "discount": 12,
+      "valid": true
+    },
+    {
+      "id": "19",
+      "code": "COUPONC1D2E3",
+      "discount": 18,
+      "valid": true
+    },
+    {
+      "id": "20",
+      "code": "COUPONF4G5H6",
+      "discount": 22,
+      "valid": true
+    },
+    {
+      "id": "21",
+      "code": "COUPONX9Y8Z7",
+      "discount": 28,
+      "valid": true
+    },
+    {
+      "id": "22",
+      "code": "COUPONA6B5C4",
+      "discount": 33,
+      "valid": true
+    },
+    {
+      "id": "23",
+      "code": "COUPOND3E2F1",
+      "discount": 48,
+      "valid": true
+    },
+    {
+      "id": "24",
+      "code": "COUPONG6H5I4",
+      "discount": 58,
+      "valid": true
+    },
+    {
+      "id": "25",
+      "code": "COUPONJ9K8L7",
+      "discount": 68,
+      "valid": true
+    },
+    {
+      "id": "26",
+      "code": "COUPONM3N2O1",
+      "discount": 78,
+      "valid": true
+    },
+    {
+      "id": "27",
+      "code": "COUPONP6Q5R4",
+      "discount": 88,
+      "valid": true
+    },
+    {
+      "id": "28",
+      "code": "COUPONS9T8U7",
+      "discount": 32,
+      "valid": true
+    },
+    {
+      "id": "29",
+      "code": "COUPONV3W2X1",
+      "discount": 42,
+      "valid": true
+    },
+    {
+      "id": "30",
+      "code": "COUPONY6Z5A4",
+      "discount": 52,
+      "valid": true
+    }
+  ]
+}
