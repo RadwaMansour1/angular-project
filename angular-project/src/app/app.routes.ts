@@ -11,10 +11,12 @@ import { AccountInfoComponent } from './components/profileComponents/account-inf
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './pages/home/home.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
 
 export const routes: Routes = [
   {path:"", component:HomeComponent, title:"Home"},
   { path: 'products', component: CategoryListComponent },
+  { path: 'aboutus', component: AboutUsComponent },
   { path: 'products/:category', component: ProductListComponent },
   { path: 'products/:category/:productId', component: ProductDetailsComponent },
   {path:'cart',component:CartComponent},
