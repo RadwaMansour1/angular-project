@@ -10,6 +10,7 @@ input{
     width: 20vw;
     padding: 12px;
     color: rgba(128, 128, 128, 0.788);
+    background-color: white;
 }
 .changePassword input{
     width: 45vw;

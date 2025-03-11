@@ -1,0 +1,179 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Radwa Mansour",
+      "email": "radwa@gmail.com",
+      "password": "radwa1",
+      "phone": "01044596321",
+      "favorites": [
+        "101",
+        "401"
+      ],
+      "gender": "female",
+      "address": "123 str",
+      "cart": [
+        {
+          "productId": "101",
+          "quantity": 1
+        },
+        {
+          "productId": "401",
+          "quantity": 2
+        }
+      ],
+      "orders": [
+        {
+          "orderId": "5001",
+          "products": [
+            {
+              "productId": "201",
+              "quantity": 1
+            },
+            {
+              "productId": "203",
+              "quantity": 2
+            }
+          ],
+          "totalPrice": 61000,
+          "status": "Delivered"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Reem Aymen",
+      "email": "reem@gmail.com",
+      "password": "reem2",
+      "phone": "01288896321",
+      "favorites": [
+        "102",
+        "501"
+      ],
+      "gender": "female",
+      "address": "456 str",
+      "cart": [
+        {
+          "productId": 102,
+          "quantity": 1
+        }
+      ],
+      "orders": [
+        {
+          "orderId": " 5002",
+          "products": [
+            {
+              "productId": "502",
+              "quantity": 1
+            },
+            {
+              "productId": " 604",
+              "quantity": 1
+            }
+          ],
+          "totalPrice": 58000,
+          "status": "Shipped"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Omar Sayed",
+      "email": "omar@gmail.com",
+      "password": "omar3",
+      "phone": "01039978125",
+      "favorites": [
+        "103",
+        "501"
+      ],
+      "gender": "male",
+      "address": "789 str",
+      "cart": [],
+      "orders": []
+    },
+    {
+      "id": "4",
+      "name": "Ahmed Mostafa",
+      "email": "ahmed@gmail.com",
+      "password": "ahmed4",
+      "phone": "01516718107",
+      "favorites": [
+        "104"
+      ],
+      "gender": "male",
+      "address": "444 str",
+      "cart": [
+        {
+          "productId": "103",
+          "quantity": 3
+        }
+      ],
+      "orders": [
+        {
+          "orderId": "5003",
+          "products": [
+            {
+              "productId": "501",
+              "quantity": 1
+            }
+          ],
+          "totalPrice": 25000,
+          "status": "Processing"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Tadros Nasr",
+      "email": "tadros@gmail.com",
+      "password": "tadros5",
+      "phone": "01122587413",
+      "favorites": [],
+      "gender": "male",
+      "address": "777 str",
+      "cart": [
+        {
+          "productId": "104",
+          "quantity": 1
+        }
+      ],
+      "orders": []
+    },
+    {
+      "id": 7,
+      "name": "Mahmoud Samy",
+      "email": "mo@gmail.com",
+      "address": "12 melig, cairo",
+      "gender": "Male",
+      "password": "12345678",
+      "phone": "01013215198",
+      "favorites": [],
+      "cart": [],
+      "orders": []
+    },
+    {
+      "id": "96934c63-a675-4b0c-9667-2d17517d4387",
+      "name": "Nora Hossam",
+      "email": "nor44@gmail.com",
+      "address": "44 str, banha",
+      "gender": "Female",
+      "password": "nora1990",
+      "phone": "01215648777",
+      "favorites": [],
+      "cart": [],
+      "orders": []
+    },
+    {
+      "id": "fe4f88b0-9b3e-450f-b4a2-c9f2583d9d08",
+      "name": "Sayed Hassan",
+      "email": "sayed10@gmail.com",
+      "address": "20 str, tanta",
+      "gender": "Male",
+      "password": "12345678",
+      "phone": "01112359874",
+      "favorites": [],
+      "cart": [],
+      "orders": []
+    }
+  ]
+}

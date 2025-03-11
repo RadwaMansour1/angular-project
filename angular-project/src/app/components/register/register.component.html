@@ -1,25 +1,46 @@
 <div class=" w-75 mx-auto ">
         
-<div class="d-flex flex-column justify-content-center align-items-center mx-auto w-75">
+<form [formGroup]="regValidation" class="d-flex flex-column justify-content-center align-items-center mx-auto" style="width: 50%;">
     <div class="p-4 m-4  bg-white">
         <h3>Sign Up</h3>
         <p class="text-secondary">Create New Account</p>
-        <input type="text" placeholder="First Name" class="w-100 px-2 py-1 my-2">
-
-        <input type="text" placeholder="Last name" class="w-100 px-1 py-1 my-2">
-        <input type="text" placeholder="Email" class="w-100 px-2 py-1 my-2">
-        <input type="text" placeholder="Password" class="w-100 px-2 py-1 my-2">
-        <input type="text" placeholder="Confirm Password" class="w-100 px-2 py-1 my-2">
-        <input type="text" placeholder="Phone Number (+20)" class="w-100 px-2 py-1 my-2">
-        
+        <input type="text" [ngStyle]="{'outline':(!isValidFirstName && firstName.value !='')?'2px solid red':'none'}"formControlName="firstName" #firstName placeholder="First Name" class="w-100 px-2 py-2 my-2">
+        @if (!isValidFirstName && firstName.value !="") {
+            <span  class="text-center text-danger">name should start with capital charcter and at least 3 charcters</span>
+        }
+        <input type="text" [ngStyle]="{'outline':(!isValidLastName && lastName.value !='')?'2px solid red':'none'}" formControlName="lastName" #lastName placeholder="Last name" class="w-100 px-1 py-2 my-2">
+        @if (!isValidLastName && lastName.value !="") {
+            <span class="text-center text-danger">name should start with capital charcter and at least 3 charcters</span>
+        }
+        <input type="text" [ngStyle]="{'outline':(!isValidEmail && email.value !='')?'2px solid red':'none'}" formControlName="email" #email placeholder="Email" class="w-100 px-2 py-2 my-2">
+        @if (!isValidEmail && email.value !="") {
+            <span class="text-center text-danger">invalid email</span>
+        }
+        <input type="text" [ngStyle]="{'outline':(!isValidPassword && pass.value !='')?'2px solid red':'none'}" formControlName="password" #pass placeholder="Password" class="w-100 px-2 py-2 my-2">
+        @if (!isValidPassword && pass.value !="") {
+            <span class="text-center text-danger">password length should be at least 8</span>
+        }
+        <input type="text" [ngStyle]="{'outline':(confirmPass.value !== pass.value && confirmPass.value !='')?'2px solid red':'none'}" formControlName="confirmPassword" #confirmPass placeholder="Confirm Password" class="w-100 px-2 py-2 my-2">
+        @if ( confirmPass.value !== pass.value && confirmPass.value !="" ) {
+            <span class="text-center text-danger">password not match</span>
+        }
+        <input type="text" [ngStyle]="{'outline':(!isValidPhone && phone.value !='')?'2px solid red':'none'}" formControlName="phone" #phone placeholder="Phone Number (+20)" class="w-100 px-2 py-2 my-2">
+        @if (!isValidPhone && phone.value !="") {
+            <span class="text-center text-danger">Invalid phone number</span>
+        }
+        <input type="text" [ngStyle]="{'outline':(!isValidAddress && address.value !='')?'2px solid red':'none'}" formControlName="address" #address placeholder="Address" class="w-100 px-2 py-2 my-2">
+        @if (!isValidAddress && address.value !="") {
+            <span class="text-center text-danger">Invalid address</span>
+        }
         <div class="d-flex my-2 align-items-center">
             <h6 class="text-secondary my-1 me-2">Gender: </h6>
-            <!-- <label for="gender" class="form-label me-2">Gender:</label> -->
-        <select name="gender" class="form-select w-25">
+        <select name="gender" (change)="setGender($event)" class="form-select w-25">
             <option value="Male">Male</option>
             <option value="Female">Female</option>
         </select>
-
+        </div>
+        <div class="text-center my-4">
+            <input type="submit" value="Sign Up" class="btn btn-outline-primary py-2 px-4 w-50 text-center border-primary rounded-3" (click)="signUp()">
         </div>
         <div class="d-flex justify-content-center">
          <hr class="flex-grow-1 me-2">
@@ -27,15 +48,15 @@
          <hr class="flex-grow-1 ms-2">
         </div>
         <a href="#" class="text-decoration-none">
-            <div class="d-flex justify-content-center align-items-center w-100 border border-1 border-secondary-subtle  p-2 rounded-3">
-                <img src="assets/images/facebook.svg" class="me-2" style="width: 30px; " alt="">
-                <p class="text-secondary m-0">Sign Up with Facebook</p>
+            <div class="d-flex justify-content-center align-items-center bg-primary w-100 border border-1 border-secondary-subtle  p-2 rounded-3">
+                <img src="assets/images/facebook.svg" class="me-2 text-white" style="width: 30px; " alt="">
+                <p class="text-white m-0">Sign Up with Facebook</p>
             </div>
         </a>
         <a href="#" class="text-decoration-none">
-            <div class="d-flex justify-content-center align-items-center w-100 border border-1 border-secondary-subtle my-3 p-2 rounded-3">
+            <div class="d-flex justify-content-center bg-danger align-items-center w-100 border border-1 border-secondary-subtle my-3 p-2 rounded-3">
                 <img src="assets/images/google.svg" class="me-2" style="width: 30px;" alt="">
-                <p class="text-secondary m-0">Sign Up with Google</p>
+                <p class="text-white m-0">Sign Up with Google</p>
             </div>
         </a>
         <a href="#" class="text-decoration-none">
@@ -45,8 +66,8 @@
             </div>
         </a>
     </div>
-    <p>already have account? <a href="#" class="text-primary text-decoration-none">sign in!</a></p>
+    <p>already have account? <a routerLink="/login" class="text-primary text-decoration-none">sign in!</a></p>
     
-</div>
+</form>
 
 </div>
