@@ -18,11 +18,12 @@ export class LoginComponent {
   password:string = "";
 
   handleLogin(){
-    let userExist = false;
     this.userService.getUsers().subscribe({
       next:(res)=>{
        const [user] = res.filter((user)=>user.email === this.email);
        if(user && user.password === this.password){
+        this.userService.user = user;
+        console.log(this.userService.user)
         this.router.navigate(['/'])
        }else{
         alert("Invalid Email Or Password")

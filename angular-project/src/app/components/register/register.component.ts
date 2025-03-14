@@ -71,6 +71,7 @@ setGender(event:Event){
           this.router.navigate(["/login"]);
         },
         error: (error) => {
+          console.log(error)
           alert("Sign up failed. Please try again.");
         },
       });

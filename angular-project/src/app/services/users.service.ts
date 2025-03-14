@@ -10,6 +10,24 @@ export class UsersService {
 
   constructor(private http:HttpClient) { }
 
+  private _user:UserInterface | null = null;
+
+  set user(user:UserInterface){
+    this._user = user;
+    localStorage.setItem("currentUser",JSON.stringify(user));
+  }
+
+  get user(){
+    if(this._user === null){
+      const user = localStorage.getItem("currentUser");
+      if(user){
+        this._user = JSON.parse(user);
+      }
+    }
+    return this._user!;
+  }
+
+
   getUsers():Observable<UserInterface[]>{
    return this.http.get<UserInterface[]>("http://localhost:3000/users");
   }
