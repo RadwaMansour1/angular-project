@@ -17,3 +17,10 @@ input{
     height: 2.8rem;
     margin: 8px;
 }
+
+.circular{
+    vertical-align: middle;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+}

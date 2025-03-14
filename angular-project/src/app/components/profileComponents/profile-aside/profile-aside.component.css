@@ -6,9 +6,17 @@
 }
 
 .selected{
-    background-color: rgba(18, 202, 226, 0.478);
+    /* background-color: rgba(18, 202, 226, 0.478);
     color: white;
-    transition: background-color 0.8s ease-in-out;
+    transition: background-color 0.8s ease-in-out; */
+    background-image: linear-gradient(
+        to right,
+        #21018b, 
+        #2b84fc   
+        );
+        font-weight: 200;
+        color: white;
+        transition: background-color 0.8s ease-in-out;
 }
 /* Ensure no conflicting styles */
 a {

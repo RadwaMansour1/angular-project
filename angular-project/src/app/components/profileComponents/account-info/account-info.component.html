@@ -1,5 +1,19 @@
-<div class="offset-0 offset-md-2 rounded-3 p-5 col-12 col-md-8 text-center text-md-start w-100">
+<div class=" rounded-3 p-5 col-12 col-md-8 text-center text-md-start w-100">
     <h1 class="mb-5">Account Details</h1>
+
+    <div class="d-flex justify-content-between align-items-center">
+        <div class=" d-flex align-items-center gap-3 mb-5">
+            <img src="assets/images/profile.jpg" alt="profile" class="circular align-self-center mt-3 mb-1">
+           <div class="d-flex flex-column justify-content-start gap-1">
+            <h5 class="m-0">{{firstName}} {{lastName}}</h5>
+            <p class="text-secondary m-0 ">{{email}}</p>
+           </div>
+        </div>
+        <Button  class="text-transparent border-0 d-flex align-items-center justify-content-center" (click)="handleLogOut()">
+         <img src="assets/images/profile/logout.svg" class="me-2" style="width: 1.2rem;" alt="">
+         <p class=" m-0 text-black" style="font-weight:400; font-size: 1.1rem;">Logout</p>
+        </Button>
+    </div>
     <form >
         <div class="d-flex mb-5">
             <div class="d-flex flex-column">
@@ -36,15 +50,17 @@
             <input type="text" name="email" id="email" placeholder="Confirm New password" class="border-0 rounded-3">
         </div>
 
-        @if((fnameChanged || lnameChanged || emailChanged || genderChanged)
-         && (firstName !== "Ahmed" || lastName !== "Mostafa" || email!== "ahmed44@gmail.com" || gendertype.value !== "Male")
-        ){
-            <div class="buttons d-flex justify-content-end align-items-center ">
-                <a href="#" class="text-decoration-none text-black me-4">
-                    Cancel
-                </a>
-                <button class="py-3 px-5 border-0 rounded-3 bg-primary text-white">Save Changes</button>
-            </div>
-        }
+        <div class="d-flex justify-content-between">
+    <Button class="text-decoration-none text-danger bg-transparent border-0" (click)="handleDelete()">Delete My Account</Button>
+    @if((fnameChanged || lnameChanged || emailChanged || genderChanged)
+    ){
+        <div class="buttons d-flex justify-content-end align-items-center ">
+            <a href="#" class="text-decoration-none text-black me-4">
+                Cancel
+            </a>
+            <button class="py-3 px-5 border-0 rounded-3 bg-primary text-white">Save Changes</button>
+        </div>
+    }
+        </div>
     </form>
 </div>

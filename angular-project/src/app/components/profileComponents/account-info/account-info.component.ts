@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import {FormsModule} from "@angular/forms"
 import { UsersService } from '../../../services/users.service';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-account-info',
-  imports: [FormsModule],
+  imports: [FormsModule,RouterModule],
   templateUrl: './account-info.component.html',
   styleUrl: './account-info.component.css'
 })
 export class AccountInfoComponent{
-  constructor(private userService:UsersService){
+  constructor(private userService:UsersService , private routetr:Router){
     console.log(this.userService.user)
     this.firstName = this.userService.user.name.split(" ")[0];
     this.lastName = this.userService.user.name.split(" ")[1];
@@ -40,5 +41,23 @@ export class AccountInfoComponent{
   }
   onGenderChange(){
     this.genderChanged = true
+  }
+
+  handleDelete(){
+    const conf = confirm("Are you sure you want to delete your account?");
+    if(conf)
+      this.userService.deleteUser(this.userService.user.id).subscribe({
+    next:()=>{
+      localStorage.removeItem("currentUser");
+      this.routetr.navigate(["/login"]);
+    },
+    error:(err)=>{
+      console.log(err);
+  }})
+  }
+
+  handleLogOut(){
+    localStorage.removeItem("currentUser");
+    this.routetr.navigate(["/login"]);
   }
 }

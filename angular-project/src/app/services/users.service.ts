@@ -39,5 +39,10 @@ export class UsersService {
   getUserById(id: string): Observable<UserInterface> {
     return this.http.get<UserInterface>(`http://localhost:3000/users/${id}`);
   }
+
+  deleteUser(id:string):Observable<UserInterface> {
+    console.log('Deleting user with ID:', id); 
+    return this.http.delete<UserInterface>(`http://localhost:3000/users/${id}`)
+  }
   
 }
