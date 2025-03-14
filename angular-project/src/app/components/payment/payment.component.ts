@@ -1,16 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Product } from '../../models/product';
-import { FormsModule } from '@angular/forms';
+import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Coupon } from '../../models/cuopon';
+import { CouponService } from '../../services/coupon.service';
 
 @Component({
   selector: 'app-payment',
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule,ReactiveFormsModule],
   templateUrl: './payment.component.html',
   styleUrl: './payment.component.css'
 })
-export class PaymentComponent {
+export class PaymentComponent implements OnInit {
       productsInCart: Product[]=[
         {id:1, name: 'Product 1', price: 58600, quantity:1, img: 'images/1.jpeg'},
         {id:2, name: 'Product 2', price: 18000, quantity:3, img: 'images/1.jpeg'},
@@ -32,8 +33,7 @@ export class PaymentComponent {
         // this.handleDisc(this.code);
       }
 
-
-
+     
       selectedMonth:string="";
       months=[
         {id:1, name:"January"},
@@ -54,7 +54,7 @@ export class PaymentComponent {
       selectedYear:string="";
       
      years:Number[] = [];
-     constructor(){
+     constructor(private _couponService:CouponService){
 
        const futureYears=15;
       const currentYear= new Date().getFullYear();
@@ -62,25 +62,90 @@ export class PaymentComponent {
 
      }
 
-      coupon:Coupon[]=[
-        {code:"111", discount:0.1},
-        {code:"222", discount:0.25},
-        {code:"333", discount:0.5},
-      ]
+     coupon:Coupon[]=[]
 
+
+     ngOnInit(): void {
+       this._couponService.getCoupons().subscribe({
+         next:(data)=>{
+          console.log(data)
+          this.coupon=data;
+         },
+        //  error:(error)=>{
+        //   console.error(error);
+        //   }
+       })
+     }
+     
       discount:number=0
       finalTotal:number=this.calculateTotal();
       code:string="";
-      handleDisc(code:any):void{
-        this.code=code;
-        const coupon = this.coupon.find(c => c.code === code);
-        if (coupon) {
-          this.discount= coupon.discount * this.calculateTotal();
-          this.finalTotal-=this.discount;
-          this.coupon=this.coupon.filter(c=>c.code!==code)
 
-        }
-      }
+      isCouponValid:boolean=false;
+     handleDisc(code: any): void {
+  this.code = code;
+  const coupon = this.coupon.find(c => c.code === code);
 
+  if (coupon && coupon.valid) {
+    this.isCouponValid=true ;
+    this.ValidCredit.controls.coupon.setValue(code);
+    this.ValidCredit.controls.coupon.markAsTouched();
+    this.ValidCredit.controls.coupon.updateValueAndValidity(); // Forces change detection
+    // console.log(this.ValidCredit.controls.coupon.touched)
+    this.discount = coupon.discount * 0.01 * this.calculateTotal();
+    this.finalTotal -= this.discount;
+
+    // Call API to mark coupon as invalid
+    this._couponService.changeValid(coupon.id, false).subscribe(() => {
+      // Update the coupon validity locally after the API call succeeds
+      coupon.valid = false;
+      // this.coupon = this.coupon.filter(c => c.id !== coupon.id); // Remove invalid coupon from the list
+    });
+  }
+}
+
+//credit card validation
+
+CardholderName:string=""
+CardNumber:string="";
+CVC:number | undefined;
+
+
+ValidCredit = new FormGroup({
+  holderName: new FormControl(null, [Validators.required, Validators.pattern('^[a-zA-Z ]{2,}$')]),
+  CardNum: new FormControl(null, [Validators.required, Validators.pattern('^\\d{13,19}$')]),
+  CVC: new FormControl(null, [Validators.required, Validators.pattern('^\\d{3,4}$')]),
+  coupon: new FormControl(null),
+});
       
+get invalidCoupon(){
+  return this.ValidCredit.controls.coupon.touched && !this.isCouponValid;
+}
+
+get nameInvalid() {
+  return this.ValidCredit.controls.holderName.invalid && this.ValidCredit.controls.holderName.touched;
+}
+
+get cardNumInvalid() {
+  return this.ValidCredit.controls.CardNum.invalid && this.ValidCredit.controls.CardNum.touched;
+}
+
+get CVCInvalid() {
+  return this.ValidCredit.controls.CVC.invalid && this.ValidCredit.controls.CVC.touched;
+}
+
+payWithCard(){
+  if(!this.nameInvalid && !this.cardNumInvalid && !this.CVCInvalid){
+    //check user balance minus user 
+  }
+}
+
+// pay on delivery
+
+isDisabled = false; 
+
+payOnDel() {
+  this.isDisabled = !this.isDisabled; // Toggle the state
+  console.log( this.isDisabled)
+}
 }

@@ -35,4 +35,9 @@ export class UsersService {
   setUser(data:UserInterface): Observable<UserInterface>{
     return this.http.post<UserInterface>("http://localhost:3000/users",data);
   }
+
+  getUserById(id: string): Observable<UserInterface> {
+    return this.http.get<UserInterface>(`http://localhost:3000/users/${id}`);
+  }
+  
 }

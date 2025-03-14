@@ -1,4 +1,6 @@
 export interface Coupon{
+      id:number;
       code:string;
       discount: number;
+      valid:boolean;
 }
