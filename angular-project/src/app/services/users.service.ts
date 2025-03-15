@@ -45,4 +45,7 @@ export class UsersService {
     return this.http.delete<UserInterface>(`http://localhost:3000/users/${id}`)
   }
   
+  updateUser(id:string ,newData:UserInterface):Observable<UserInterface>{
+    return this.http.put<UserInterface>(`http://localhost:3000/users/${id}`,newData)
+  }
 }

@@ -60,4 +60,36 @@ export class AccountInfoComponent{
     localStorage.removeItem("currentUser");
     this.routetr.navigate(["/login"]);
   }
+  updateData(event:Event){
+    event.preventDefault();
+    this.userService.getUsers().subscribe({
+      next:(users)=>{
+        console.log(users);
+        const indx = users.findIndex((u)=>u.email === this.email)
+        if(indx !==-1){
+          // users[indx] = {...users[indx],name:`${this.firstName} ${this.lastName}`,email:this.email,gender:this.gender};
+          console.log(this.userService.user.id)
+          this.userService.updateUser(this.userService.user.id,{...users[indx],name:`${this.firstName} ${this.lastName}`,email:this.email,gender:this.gender}).subscribe({
+            next:(res)=>{
+              console.log(res)
+              
+              this.userService.user = res;
+              console.log(this.userService.user);
+              alert("Data Updated");
+            },
+            error:(err)=>{
+              console.log(err)
+            }
+          })
+          
+
+        }
+        
+
+      },
+      error:(err)=>{
+        console.log(err)
+      }
+    })
+  }
 }
