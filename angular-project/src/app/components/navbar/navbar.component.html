@@ -9,7 +9,15 @@
                 <div class="d-flex gap-3">
                     <a routerLink="/login" class="nav-link text-white" aria-current="page">Login</a>
                     <div class="vr bg-white"></div>
-                    <a class="nav-item" routerLink="/cart"> <i class="bi bi-cart fs-5 text-white"></i> </a>
+                    <a class="nav-item" routerLink="/cart"> 
+                        <i class="bi bi-cart fs-5 text-white"></i> 
+                     @if(counter>0){
+                        <span class="badge bg-danger rounded-circle translate-middle p-1 small-badge "> 
+                            {{counter}} 
+
+                        </span>
+                     }
+                    </a>
                 </div>
             </div>
 
