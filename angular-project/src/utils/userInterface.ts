@@ -2,6 +2,7 @@ export default interface UserInterface{
     id:string,
     name:string,
     email:string,
+    balance:number,
     password:string,
     phone:string,
     favorites:[string] | [],

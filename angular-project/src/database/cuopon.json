@@ -22,7 +22,7 @@
       "id": "4",
       "code": "COUPONJ1K2L3",
       "discount": 50,
-      "valid": false
+      "valid": true
     },
     {
       "id": "5",
@@ -58,7 +58,7 @@
       "id": "10",
       "code": "COUPONB1C2D3",
       "discount": 20,
-      "valid": true
+      "valid": false
     },
     {
       "id": "11",

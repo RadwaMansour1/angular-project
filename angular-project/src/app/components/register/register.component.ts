@@ -54,7 +54,7 @@ setGender(event:Event){
   signUp(){
     if(this.regValidation.valid){
       const userData:UserInterface = {
-        id: uuid(), 
+        id: uuid(),
         name: `${this.regValidation.controls.firstName.value} ${this.regValidation.controls.lastName.value}`,
         email: this.regValidation.controls.email.value ?? "",
         address: this.regValidation.controls.address.value ?? "",
@@ -64,6 +64,7 @@ setGender(event:Event){
         favorites: [],
         cart: [],
         orders: [],
+        balance: 100000,
       };
   
       this.userService.setUser(userData).subscribe({

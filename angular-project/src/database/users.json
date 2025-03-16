@@ -5,6 +5,7 @@
       "name": "Radwa Mansour",
       "email": "radwa@gmail.com",
       "password": "radwa1",
+      "balance": 100000,
       "phone": "01044596321",
       "favorites": [
         "101",
@@ -19,6 +20,10 @@
         },
         {
           "productId": "401",
+          "quantity": 2
+        },
+        {
+          "productId": "106",
           "quantity": 2
         }
       ],
@@ -45,6 +50,7 @@
       "name": "Reem Aymen",
       "email": "reem@gmail.com",
       "password": "reem2",
+      "balance": 100000,
       "phone": "01288896321",
       "favorites": [
         "102",
@@ -55,6 +61,10 @@
       "cart": [
         {
           "productId": 102,
+          "quantity": 1
+        },
+        {
+          "productId": 106,
           "quantity": 1
         }
       ],
@@ -81,6 +91,7 @@
       "name": "Omar Sayed",
       "email": "omar@gmail.com",
       "password": "omar3",
+      "balance": 10000,
       "phone": "01039978125",
       "favorites": [
         "103",
@@ -88,7 +99,12 @@
       ],
       "gender": "male",
       "address": "789 str",
-      "cart": [],
+      "cart": [
+        {
+          "productId": "304",
+          "quantity": 1
+        }
+      ],
       "orders": []
     },
     {
@@ -97,6 +113,7 @@
       "email": "ahmed@gmail.com",
       "password": "ahmed4",
       "phone": "01516718107",
+      "balance": 16000,
       "favorites": [
         "104"
       ],
@@ -127,6 +144,7 @@
       "name": "Tadros Nasr",
       "email": "tadros@gmail.com",
       "password": "tadros5",
+      "balance": 100000,
       "phone": "01122587413",
       "favorites": [],
       "gender": "male",
@@ -146,6 +164,7 @@
       "address": "12 melig, cairo",
       "gender": "Male",
       "password": "12345678",
+      "balance": 100000,
       "phone": "01013215198",
       "favorites": [],
       "cart": [],
@@ -158,6 +177,7 @@
       "address": "44 str, banha",
       "gender": "Female",
       "password": "nora1990",
+      "balance": 100000,
       "phone": "01215648777",
       "favorites": [],
       "cart": [],
@@ -171,6 +191,7 @@
       "gender": "Male",
       "password": "12345678",
       "phone": "01112359874",
+      "balance": 100000,
       "favorites": [],
       "cart": [],
       "orders": []

@@ -47,14 +47,7 @@ ngOnInit(): void {
           }
     });
 
-    // this._productService.getProductById("Laptops & Computers", cartItem.productId).subscribe((product)=>{
-    //   if(product && product.id){
-    //     this.productsInCart.push({
-    //       ...product, quantity: cartItem.quantity
-         
-    //     })
-    //   }
-    // });
+  
   });
 }
  
@@ -80,22 +73,7 @@ ngOnInit(): void {
   }
 
  async removeFromCart(e:string|number):Promise<void>{
-    // this.userService.user.cart = this.userService.user.cart.filter(
-    //   (product) => product.productId !== e
-    // ) as { productId: string; quantity: number }[];
-    
-    // this.userService.user.cart = this.userService.user.cart.filter(product => product.productId !== e) as { productId: string; quantity: number; }[];
-    // this.userService.user.cart = [...this.userService.user.cart.filter(product => product.productId !== e)];
-
-    // const cart = this.userService.user.cart;
-    // for (let i = 0; i < cart.length; i++) {
-    //   if (cart[i].productId === e) {
-    //     cart.splice(i, 1);
-    //     break; // Exit loop after removing the first matching item
-    //   }
-    // }
-    // this.userService.user.cart = cart;
-    // console.log(this.userService.user.cart )
+  
 
     const userId = this.userService.user.id; // Get the user ID
 

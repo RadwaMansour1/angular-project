@@ -9,7 +9,7 @@ import { Coupon } from '../models/cuopon';
 export class CouponService {
 
   constructor(private http: HttpClient) { }
-  private couponURL="http://localhost:3000/coupons";
+  private couponURL="http://localhost:3002/coupons";
 
   getCoupons():Observable<Coupon[]>{
     return this.http.get<Coupon[]>(this.couponURL);
