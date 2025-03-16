@@ -45,7 +45,6 @@ export class UsersService {
     return this.http.delete<UserInterface>(`http://localhost:3000/users/${id}`)
   }
   
-<<<<<<< HEAD
   async removeItemFromCart(userId: string, productId: string): Promise<UserInterface> {
     try {
       // Fetch the user
@@ -71,9 +70,7 @@ export class UsersService {
     }
   }
   
-=======
   updateUser(id:string ,newData:UserInterface):Observable<UserInterface>{
     return this.http.put<UserInterface>(`http://localhost:3000/users/${id}`,newData)
   }
->>>>>>> 0d903f36e645ff82efe8053cc8761e03e54e4415
 }
