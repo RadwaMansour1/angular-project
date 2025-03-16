@@ -7,7 +7,7 @@ export default interface UserInterface{
     favorites:[string] | [],
     gender:string,
     address:string,
-    cart:[{productId: string, quantity: number }] |[],
+    cart:{productId: string, quantity: number }[] |[],
     orders:[{
         orderId: string,
         products: [

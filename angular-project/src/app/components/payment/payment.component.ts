@@ -13,9 +13,27 @@ import { CouponService } from '../../services/coupon.service';
 })
 export class PaymentComponent implements OnInit {
       productsInCart: Product[]=[
-        {id:1, name: 'Product 1', price: 58600, quantity:1, img: 'images/1.jpeg'},
-        {id:2, name: 'Product 2', price: 18000, quantity:3, img: 'images/1.jpeg'},
-        {id:3, name: 'Product 3', price: 26400, quantity:2, img: 'images/1.jpeg'},
+        {
+          id: "1", name: 'Product 1', price: 58600, quantity: 1, imageUrl: 'images/1.jpeg',
+          category: '',
+          rating: 0,
+          description: '',
+          quantityUserTake: 0
+        },
+        {
+          id: "2", name: 'Product 2', price: 18000, quantity: 3, imageUrl: 'images/1.jpeg',
+          category: '',
+          rating: 0,
+          description: '',
+          quantityUserTake: 0
+        },
+        {
+          id: "3", name: 'Product 3', price: 26400, quantity: 2, imageUrl: 'images/1.jpeg',
+          category: '',
+          rating: 0,
+          description: '',
+          quantityUserTake: 0
+        },
     
       ];
     

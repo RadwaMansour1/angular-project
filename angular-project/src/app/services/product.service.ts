@@ -29,9 +29,18 @@ export class ProductService {
   }
 
 
-  getProductById(category: string, productId: string): Observable<Product | undefined> {
+  // getProductById(category: string, productId: string): Observable<Product | undefined> {
+  //   return this.http.get<Product[]>(this.productsUrl).pipe(
+  //     map(products => products.find(p => p.category === category && p.id === productId))
+  //   );
+  // }
+
+  getProductById(category: string | null, productId: string): Observable<Product | undefined> {
     return this.http.get<Product[]>(this.productsUrl).pipe(
-      map(products => products.find(p => p.category === category && p.id === productId))
+      map(products => 
+        products.find(p => (category === null || p.category === category) && p.id === productId)
+      )
     );
   }
+  
 }

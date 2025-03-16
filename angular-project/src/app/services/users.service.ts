@@ -45,4 +45,29 @@ export class UsersService {
     return this.http.delete<UserInterface>(`http://localhost:3000/users/${id}`)
   }
   
+  async removeItemFromCart(userId: string, productId: string): Promise<UserInterface> {
+    try {
+      // Fetch the user
+      const user = await this.http.get<UserInterface>(`http://localhost:3000/users/${userId}`).toPromise();
+  
+      if (!user) {
+        throw new Error('User not found');
+      }
+  
+      // Remove the item from the cart
+      user.cart = user.cart.filter(item => item.productId !== productId);
+  
+      // Update the user data on the server
+      const updatedUser = await this.http.put<UserInterface>(`http://localhost:3000/users/${userId}`, user).toPromise();
+  
+      // Update the local user data
+      this.user = updatedUser!;
+  
+      return updatedUser!;
+    } catch (error) {
+      console.error('Error updating cart:', error);
+      throw error;
+    }
+  }
+  
 }
