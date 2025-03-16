@@ -1,4 +1,5 @@
-import { Routes } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
+import { NgModule } from '@angular/core';
 import { CategoryListComponent } from './components/category-list/category-list.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
@@ -11,13 +12,15 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
+import { FavoriteComponent } from './components/favorite/favorite.component';
 
 export const routes: Routes = [
   {path:"", component:HomeComponent, title:"Home"},
-  { path: 'products', component: CategoryListComponent },
   { path: 'aboutus', component: AboutUsComponent },
+  { path: 'products', component: CategoryListComponent },
   { path: 'products/:category', component: ProductListComponent },
   { path: 'products/:category/:productId', component: ProductDetailsComponent },
+  { path: 'favorites', component: FavoriteComponent },
   {path:'cart',component:CartComponent},
   {path:'payment',component:PaymentComponent},
   {path:"login" ,component:LoginComponent},
@@ -28,3 +31,11 @@ export const routes: Routes = [
     {path:"accountInfo" ,component:AccountInfoComponent, title:"account info"},
 ]}
 ];
+
+
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
