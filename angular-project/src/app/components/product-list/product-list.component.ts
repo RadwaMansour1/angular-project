@@ -1,44 +1,50 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from '../../services/product.service';
-// import { FavoriteService } from '../../services/favorite.service';
-// import { CartService } from '../../services/cart.service';
+import { FavoriteService } from '../../services/favorite.service';
+import { UsersService } from '../../services/users.service';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faHeart, faStar } from '@fortawesome/free-solid-svg-icons';
+import { faHeart, faStar, faEye } from '@fortawesome/free-solid-svg-icons';
 import { FormsModule } from '@angular/forms';
 import { Product } from '../../models/product.model';
 
 @Component({
   selector: 'app-product-list',
+  standalone: true,
   imports: [CommonModule, FontAwesomeModule, FormsModule],
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.css'
 })
-
 export class ProductListComponent implements OnInit {
   products: Product[] = [];
+  favoriteProductIds: string[] = [];
   categoryName: string = '';
   faHeart = faHeart;
   faStar = faStar;
+  faEye = faEye;
   selectedSort: string = 'popular';
-
+  userId: string = '';
 
   constructor(
     private route: ActivatedRoute,
     private productService: ProductService,
-    // private cartService: CartService,
-    // private favoriteService: FavoriteService,
+    private favoriteService: FavoriteService,
+    private usersService: UsersService,
     private router: Router
   ) {}
 
   ngOnInit(): void {
+    this.userId = this.usersService.user?.id || '';
+
     this.route.paramMap.subscribe(params => {
       this.categoryName = params.get('category') || '';
       if (this.categoryName) {
         this.fetchProducts();
       }
     });
+
+    this.loadFavorites();
   }
 
   fetchProducts(): void {
@@ -59,6 +65,7 @@ export class ProductListComponent implements OnInit {
     this.router.navigate(['/products', product.category, product.id]);
   }
 
+
   sortProducts(): void {
     switch (this.selectedSort) {
       case 'topRated':
@@ -77,27 +84,37 @@ export class ProductListComponent implements OnInit {
     }
   }
 
-  // addToCart(product: Product):void {
-  //   this.cartService.addToCart(this.product, this.quantity);
-  //   this.router.navigate(['/my-cart']);
-  // }
+
+  loadFavorites(): void {
+    if (!this.userId) return;
+
+    this.favoriteService.getUser(this.userId).subscribe(user => {
+      this.favoriteProductIds = user.favorites || [];
+    });
+  }
 
 
-  // toggleFavorite(product: Product): void {
-  //   if (!product.id) {
-  //     console.error('Error: Product ID is missing');
-  //     return;
-  //   }
+  toggleFavorite(product: Product, event: Event): void {
+    event.stopPropagation();
 
-  //   if (this.favoriteService.isFavorite(product.id)) {
-  //     this.favoriteService.removeFavorite(product.id);
-  //   } else {
-  //     this.favoriteService.addFavorite(product);
-  //   }
-  // }
+    if (!this.userId) {
+      console.warn("User is not logged in!");
+      return;
+    }
 
-  // isFavorite(productId: string): boolean {
-  //   return this.favoriteService.isFavorite(productId);
-  // }
+    if (this.favoriteProductIds.includes(product.id)) {
+      this.favoriteService.removeFavorite(this.userId, product.id).subscribe(user => {
+        this.favoriteProductIds = user.favorites || [];
+      });
+    } else {
+      this.favoriteService.addFavorite(this.userId, product.id).subscribe(user => {
+        this.favoriteProductIds = user.favorites || [];
+      });
+    }
+  }
 
+  isFavorite(productId: string): boolean {
+    return this.favoriteProductIds.includes(productId);
+  }
 }
+

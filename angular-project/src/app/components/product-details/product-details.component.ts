@@ -9,11 +9,11 @@ import { Router } from '@angular/router';
 import { Product } from '../../models/product.model';
 
 @Component({
-  selector: 'app-product-detail',
+  selector: 'app-product-details',
   standalone: true,
   imports: [CommonModule, FontAwesomeModule],
-  templateUrl: './product-detail.component.html',
-  styleUrl: './product-detail.component.css'
+  templateUrl: './product-details.component.html',
+  styleUrl: './product-details.component.css'
 })
 
 export class ProductDetailsComponent implements OnInit {

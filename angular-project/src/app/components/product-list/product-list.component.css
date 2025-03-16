@@ -2,7 +2,6 @@
   cursor: pointer;
   transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
   background-color: #ebeaea;
-  /* background-color: #292828; */
   color: #292828;
   border-radius: 10px;
   overflow: hidden;
@@ -18,7 +17,6 @@
   font-weight: bold;
   font-size: 1rem;
   margin: 0;
-
 }
 
 .product-card {
@@ -76,10 +74,15 @@
   margin: 0 auto;
 }
 
-.my-text {
+/* .my-text {
   margin-bottom: 70px ;
   color: #292828;
   margin-top: 25px;
+  font-family: 'Inter', sans-serif;
+} */
+.price {
+  font-size: 0.8rem;
+  color: #29a2cd;
   font-family: 'Inter', sans-serif;
 }
 
@@ -177,4 +180,37 @@ h2 {
 
 select,option {
   font-family: 'Inter', sans-serif;
+}
+
+
+.icon-container {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.product-card:hover .icon-container {
+  opacity: 1;
+}
+
+.icon-btn {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.icon-btn:hover {
+  transform: scale(1.2);
 }
