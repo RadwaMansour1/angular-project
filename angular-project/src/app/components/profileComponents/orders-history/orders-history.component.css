@@ -3,10 +3,12 @@
     /* height: 100vh; */
 }
 .edit{
-    background-image: linear-gradient(
+    /* background-image: linear-gradient(
     to right,
     #21018b, 
     #2b84fc   
-    );
+    ); */
+    background-color: black;
+    border-radius: 8px;
     font-weight: 200;
 }
