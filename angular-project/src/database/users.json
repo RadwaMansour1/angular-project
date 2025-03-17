@@ -91,7 +91,7 @@
       "name": "Omar Sayed",
       "email": "omar@gmail.com",
       "password": "omar3",
-      "balance": 10000,
+      "balance": 1000000,
       "phone": "01039978125",
       "favorites": [
         "103",
@@ -99,13 +99,20 @@
       ],
       "gender": "male",
       "address": "789 str",
-      "cart": [
+      "cart": [],
+      "orders": [
         {
-          "productId": "304",
-          "quantity": 1
+          "orderId": "5555",
+          "products": [
+            {
+              "productId": "304",
+              "quantity": 1
+            }
+          ],
+          "totalPrice": 85000,
+          "status": "p"
         }
-      ],
-      "orders": []
+      ]
     },
     {
       "id": "4",

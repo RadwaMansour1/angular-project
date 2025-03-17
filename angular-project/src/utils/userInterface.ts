@@ -9,12 +9,10 @@ export default interface UserInterface{
     gender:string,
     address:string,
     cart:{productId: string, quantity: number }[] |[],
-    orders:[{
-        orderId: string,
-        products: [
-          { productId: string, quantity: number },
-        ],
-        totalPrice: number,
-        status: string
-      }]|[]
+    orders:{
+      orderId: string,
+      products: { productId: string, quantity: number } [],
+      totalPrice: number,
+      status: string
+    }[]|[]
 }

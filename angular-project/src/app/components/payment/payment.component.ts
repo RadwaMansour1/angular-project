@@ -205,6 +205,21 @@ payWithCard(){
         }
       )
       alert("Processs done");
+       
+      this.userService.updateUser(this.userService.user.id,
+        {...this.userService.user, 
+        orders:[...this.userService.user.orders, 
+        {orderId:"5555", products:this.productsInUserCart, totalPrice:this.calculateTotal()-this.discount,status:"p"}],
+        cart:[]}).subscribe({
+          next: (data) => {
+            this.userService.user=data;
+            console.log(data);
+          },
+          error:(data)=>{
+            console.log(data);
+          }
+        })
+
     }else{
       alert("Insufficient balance");
     }
