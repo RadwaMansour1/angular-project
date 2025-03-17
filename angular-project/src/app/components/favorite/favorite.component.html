@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="header-container">
+    <h2 class="text-center my-text">Favorite Products</h2>
+  </div>
+  <div class="row gy-4 justify-content-center" style="margin-bottom: 50px;">
+    <div class="col-lg-3 col-md-4 col-sm-6 d-flex" *ngFor="let product of favoriteProducts">
+      <div class="card product-card">
+        <div class="image-container">
+          <img [src]="product.imageUrl" class="card-img-top" alt="{{ product.name }}">
+        </div>
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">{{ product.name }}</h5>
+          <div class="rating">
+            <fa-icon *ngFor="let star of [1,2,3,4,5]" [icon]="faStar"
+              [ngClass]="{ 'text-warning': star <= product.rating, 'text-muted': star > product.rating }">
+            </fa-icon>
+          </div>
+          <p class="price">{{ product.price | currency:'EGP':'symbol' }}</p>
+          <button class="remove-btn mt-auto" (click)="removeFavorite(product.id)"><fa-icon [icon]="faTrash"></fa-icon> Remove </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

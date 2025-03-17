@@ -5,7 +5,7 @@ export default interface UserInterface{
     balance:number,
     password:string,
     phone:string,
-    favorites:[string] | [],
+    favorites:string[],
     gender:string,
     address:string,
     cart:{productId: string, quantity: number }[] |[],
