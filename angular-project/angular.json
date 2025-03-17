@@ -26,11 +26,17 @@
                 "input": "public"
               }
             ],
+<<<<<<< Updated upstream
           "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/bootstrap-icons/font/bootstrap-icons.css",
 
               "src/styles.css"
+=======
+            "styles": [
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+>>>>>>> Stashed changes
             ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.bundle.js"
@@ -105,6 +111,10 @@
     }
   },
   "cli": {
+<<<<<<< Updated upstream
     "analytics": "72586919-163d-4f90-a6f3-c6ee9c3eabcf"
+=======
+    "analytics": "ce71a0ab-ec7b-4170-bc37-0eb39b581ba3"
+>>>>>>> Stashed changes
   }
 }
