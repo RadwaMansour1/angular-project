@@ -193,23 +193,35 @@ payWithCard(){
     if(this.userService.user.balance>= (this.calculateTotal()-this.discount)){
       const balance=  this.userService.user.balance - (this.calculateTotal()-this.discount)
 
-      this.userService.updateUser(this.userService.user.id,{...this.userService.user,balance:balance}).subscribe(
-        {
-          next: (data) => {
-            console.log(data);
-            this.userService.user=data;
-          },
-          error:(data)=>{
-            console.log(data);
-          }
-        }
-      )
+      // this.userService.updateUser(this.userService.user.id,{...this.userService.user,balance:balance}).subscribe(
+      //   {
+      //     next: (data) => {
+      //       console.log(data);
+      //       this.userService.user=data;
+      //     },
+      //     error:(data)=>{
+      //       console.log(data);
+      //     }
+      //   }
+      // )
       alert("Processs done");
        
       this.userService.updateUser(this.userService.user.id,
         {...this.userService.user, 
+          balance:balance,
         orders:[...this.userService.user.orders, 
-        {orderId:"5555", products:this.productsInUserCart, totalPrice:this.calculateTotal()-this.discount,status:"p"}],
+        {
+          orderId: "5555", products: this.productsInUserCart, totalPrice: this.calculateTotal() - this.discount, status: "p",
+          date: new Date().toLocaleString("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit",
+            hour12: true,
+          })
+        }],
         cart:[]}).subscribe({
           next: (data) => {
             this.userService.user=data;

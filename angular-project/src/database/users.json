@@ -42,7 +42,8 @@
             }
           ],
           "totalPrice": 61000,
-          "status": "Delivered"
+          "status": "Delivered",
+          "date": "2024-05-01"
         }
       ]
     },
@@ -83,7 +84,8 @@
             }
           ],
           "totalPrice": 58000,
-          "status": "Shipped"
+          "status": "Shipped",
+          "date": "2024-05-01"
         }
       ]
     },
@@ -92,7 +94,7 @@
       "name": "Omar Sayed",
       "email": "omar@gmail.com",
       "password": "omar3",
-      "balance": 1000000,
+      "balance": 915000,
       "phone": "01039978125",
       "favorites": [
         "103",
@@ -108,10 +110,31 @@
             {
               "productId": "304",
               "quantity": 1
+            },
+            {
+              "productId": "101",
+              "quantity": 2
             }
           ],
           "totalPrice": 85000,
-          "status": "p"
+          "status": "p",
+          "date": "March 18, 2025 at 01:43:27 AM"
+        },
+        {
+          "orderId": "6565",
+          "products": [
+            {
+              "productId": "106",
+              "quantity": 1
+            },
+            {
+              "productId": "202",
+              "quantity": 2
+            }
+          ],
+          "totalPrice": 85000,
+          "status": "p",
+          "date": "March 18, 2025 at 01:43:27 AM"
         }
       ]
     },
@@ -143,7 +166,8 @@
             }
           ],
           "totalPrice": 25000,
-          "status": "Processing"
+          "status": "Processing",
+          "date": "2024-05-01"
         }
       ]
     },

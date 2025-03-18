@@ -13,6 +13,7 @@ export default interface UserInterface{
       orderId: string,
       products: { productId: string, quantity: number } [],
       totalPrice: number,
-      status: string
+      status: string,
+      date: string
     }[]|[]
 }
