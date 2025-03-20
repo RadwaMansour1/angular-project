@@ -1,51 +1,85 @@
 
 <div class="container my-5">
-    <div class="mx-auto text-center py-5 bg-light rounded-3">
-      <h1>About Us</h1>
-      <p class="lead col-8 mx-auto text-center">Bringing the latest tech to your fingertips Lorem ipsum dolor sit, amet consectetur adipisicing elit. sit repellendus qui iste quibusdam nulla, vel rerum, ipsum reiciendis!</p>
-    </div>
+    <!-- <div class="mx-auto text-center py-5 bg-light rounded-3"> -->
+      <!-- <h1>About Us</h1> -->
+      <!-- <p class="lead col-8 mx-auto text-center">Bringing the latest tech to your fingertips Lorem ipsum dolor sit, amet consectetur adipisicing elit. sit repellendus qui iste quibusdam nulla, vel rerum, ipsum reiciendis!</p> -->
+    <!-- </div> -->
   
     
     <div class=" row my-5 align-items-center">
       <div class=" col-md-6">
         <h2>Our Story</h2>
-        <p class="lead">
+        <div>
+        <p class="lead my-3">
           TechGadgets was founded with the vision of providing top-notch
           technology products at affordable prices. Our team is dedicated to
           ensuring you get the best shopping experience.
         </p>
+          <br><br>
+        <p class="lead d-block d-md-none d-lg-block my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur doloribus error provident facilis, 
+           officia eaque debitis reprehenderit, eius officiis doloremque enim adipisci incidunt, amet numquam ipsam mollitia praesentium quod! Animi.
+        </p>
+        
+      </div>
       </div>
       <div class="col-md-6 text-center">
-        <img src="assets/images/team.png" class="img-fluid rounded w-50" alt="Our Team">
+        <img src="assets/images/shopping1.jpg" class="img-fluid rounded w-100" alt="Our Team">
       </div>
     </div>
-  
+
+    <div class=" row my-5 d-flex justify-content-center align-content-center col-12">
+      
+      <div class="col-12 col-lg-6 d-none d-lg-flex justify-content-center align-items-center mx-auto">
+        <div class="image-stack ">
+          <img src="assets/images/shopping2.avif" class="image1 " alt="Our goal">
+          <!-- <img src="assets/images/shopping1.jpg" class="image2" alt="Our goal"> -->
+          <img src="assets/images/shopping3.webp" class="image3" alt="Our goal">
+        </div>
+      </div>
+
+      <div class="my-4 col-lg-6">
+        <h2>Our Goal</h2>
+        <p class="lead my-3">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+          Adipisci magnam vero quia cum deserunt eius veniam, id modi, 
+          ut dolore blanditiis distinctio laborum reiciendis dolorem aperiam repudiandae dolores quam eos!
+          <br><br>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+          Adipisci magnam vero quia cum deserunt eius veniam, id modi, 
+          ut dolore blanditiis distinctio laborum reiciendis dolorem aperiam repudiandae dolores quam eos!
+        </p>
+      </div>
+
+      <!--goals in small screens -->
+      <div class="col-md-6 d-flex d-lg-none justify-content-center align-items-center ">
+        <div class="image-stack ">
+          <img src="assets/images/shopping2.avif" class="image1" alt="Our goal">
+          <!-- <img src="assets/images/shopping1.jpg" class="image2" alt="Our goal"> -->
+          <img src="assets/images/shopping3.webp" class="image3" alt="Our goal">
+        </div>
+      </div>
+    </div>
+<br>
     <div class="text-center my-5">
-        <h2>What We Offer</h2>
+        <!-- <h2>What We Offer</h2> -->
         <div class="row mt-4">
-          <div class="col-md-3">
-            <i class="fas fa-shipping-fast fa-3x text-danger"></i>
-            <img src="assets/images/fast-delivery.png" alt="Fast Shipping" class="img-fluid w-50">
-            <h5>Fast Shipping</h5>
+          <div class="col-md-4">
+            <!-- <i class="fas fa-shipping-fast fa-3x text-danger"></i> -->
+            <img src="assets/images/fast-delivery.png" alt="Fast Delivery" class="img-fluid w-25">
+            <h5 class="my-2">Fast Delivery</h5>
           </div>
-          <div class="col-md-3">
-            <i class="fas fa-lock fa-3x text-danger"></i>
-            <img src="assets/images/pay.png" alt="Fast Shipping" class="img-fluid w-50">
-            <h5>Secure Payments</h5>
+          <div class="col-md-4">
+            <img src="assets/images/secure-payment.png" alt="Secure Payments" class="img-fluid w-25">
+            <h5 class="my-2">Secure Payments</h5>
           </div>
-          <div class="col-md-3">
-            <i class="fas fa-star fa-3x text-danger"></i>
-            <img src="assets/images/product.png" alt="Fast Shipping" class="img-fluid w-50">
-            <h5>Quality Products</h5>
-          </div>
-          <div class="col-md-3">
-            <i class="fas fa-headset fa-3x text-danger"></i>
-            <img src="assets/images/support.png" alt="Fast Shipping" class="img-fluid w-50">
-            <h5>24/7 Support</h5>
+
+          <div class="col-md-4">
+            <img src="assets/images/customer-service.png" alt="Support" class="img-fluid w-25">
+            <h5 class="my-2">24/7 Support</h5>
           </div>
         </div>
       </div>
-      
+      <app-staff-slider></app-staff-slider>
     <div class="text-center my-5">
       <h2>Our Customers Opinions</h2>
       <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -66,13 +100,14 @@
       </div>
     </div>
   
-    <div class="text-center my-5">
-      <h2>Contact Us</h2>
-      <div class="mx-auto my-3">
-        <a href="https://www.facebook.com/" class="mx-3"> <img src="assets/images/fb.png" style="width: 2vw;"> </a>
-        <a href="https://www.instagram.com/" class="mx-2"> <img src="assets/images/instagram.png" style="width: 2vw;"> </a>
-        <a href="https://www.whatsapp.com/" class="mx-3"> <img src="assets/images/send.png" style="width: 2vw;"> </a>
-      </div>
-    </div>
+    <!-- <div class="text-center my-5"> -->
+      <!-- <h2>Contact Us</h2> -->
+      <!-- <div class="mx-auto my-3"> -->
+        <!-- <a href="https://www.facebook.com/" class="mx-3"> <img src="assets/images/fb.png" style="width: 2vw;"> </a> -->
+        <!-- <a href="https://www.instagram.com/" class="mx-2"> <img src="assets/images/instagram.png" style="width: 2vw;"> </a> -->
+        <!-- <a href="https://www.whatsapp.com/" class="mx-3"> <img src="assets/images/send.png" style="width: 2vw;"> </a> -->
+      <!-- </div> -->
+    <!-- </div> -->
+     
   </div>
   
