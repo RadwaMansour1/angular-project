@@ -98,7 +98,7 @@
       "name": "Omar Sayed",
       "email": "omar@gmail.com",
       "password": "omar3",
-      "balance": 915000,
+      "balance": 852000,
       "phone": "01039978125",
       "favorites": [
         "103",
@@ -108,11 +108,7 @@
       "address": "789 str",
       "cart": [
         {
-          "productId": "105",
-          "quantity": 1
-        },
-        {
-          "productId": "103",
+          "productId": "202",
           "quantity": 1
         }
       ],
@@ -148,6 +144,22 @@
           "totalPrice": 78000,
           "status": "p",
           "date": "March 18, 2025 at 01:43:27 AM"
+        },
+        {
+          "orderId": "5555",
+          "products": [
+            {
+              "productId": "105",
+              "quantity": 1
+            },
+            {
+              "productId": "103",
+              "quantity": 1
+            }
+          ],
+          "totalPrice": 63000,
+          "status": "p",
+          "date": "March 21, 2025 at 12:00:12 AM"
         }
       ]
     },
