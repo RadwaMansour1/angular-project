@@ -22,9 +22,9 @@
             <button class="btn btn-light icon-btn" (click)="toggleFavorite(product, $event)">
               <fa-icon [icon]="faHeart" [ngClass]="{ 'text-danger': isFavorite(product.id), 'text-muted': !isFavorite(product.id) }"></fa-icon>
             </button>
-            <!-- <button class="btn btn-light icon-btn" (click)="addToCart(product); $event.stopPropagation()">
+            <button class="btn btn-light icon-btn"  (click)="addToCart(product, $event)" >
               <fa-icon [icon]="faShoppingCart" class="text-dark"></fa-icon>
-            </button> -->
+            </button>
             <button class="btn btn-light icon-btn" (click)="viewProductDetails(product); $event.stopPropagation()">
               <fa-icon [icon]="faEye" class="text-dark"></fa-icon>
             </button>

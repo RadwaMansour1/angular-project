@@ -26,6 +26,10 @@
         {
           "productId": "106",
           "quantity": 2
+        },
+        {
+          "productId": "201",
+          "quantity": 1
         }
       ],
       "orders": [
@@ -62,11 +66,11 @@
       "address": "456 str",
       "cart": [
         {
-          "productId": 102,
+          "productId": "102",
           "quantity": 1
         },
         {
-          "productId": 106,
+          "productId": "106",
           "quantity": 1
         }
       ],
@@ -79,7 +83,7 @@
               "quantity": 1
             },
             {
-              "productId": " 604",
+              "productId": "604",
               "quantity": 1
             }
           ],

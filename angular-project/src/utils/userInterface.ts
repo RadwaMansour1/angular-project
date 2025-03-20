@@ -1,3 +1,5 @@
+import { CartItem } from "../app/models/cartItem.model";
+
 export default interface UserInterface{
     id:string,
     name:string,
@@ -8,7 +10,7 @@ export default interface UserInterface{
     favorites:string[],
     gender:string,
     address:string,
-    cart:{productId: string, quantity: number }[] |[],
+    cart: CartItem[],
     orders:{
       orderId: string,
       products: { productId: string, quantity: number } [],

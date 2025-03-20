@@ -16,7 +16,7 @@ import { FavoriteComponent } from './components/favorite/favorite.component';
 
 export const routes: Routes = [
   {path:"", component:HomeComponent, title:"Home"},
-  { path: 'aboutus', component: AboutUsComponent },
+  { path: 'about', component: AboutUsComponent },
   { path: 'products', component: CategoryListComponent },
   { path: 'products/:category', component: ProductListComponent },
   { path: 'products/:category/:productId', component: ProductDetailsComponent },
