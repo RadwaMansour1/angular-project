@@ -13,6 +13,7 @@ export class AccountInfoComponent{
   constructor(private userService:UsersService , private routetr:Router){
     console.log(this.userService.user)
     this.firstName = this.userService.user.name.split(" ")[0];
+    this.avatar =   this.firstName[0].toUpperCase();
     this.lastName = this.userService.user.name.split(" ")[1];
     this.email = this.userService.user.email;
     this.gender = this.userService.user.gender;
@@ -21,6 +22,7 @@ export class AccountInfoComponent{
 
   
   firstName:string = "";
+  avatar:string = "";
   lastName:string = "";
   email:string = "";
   gender:string = "";

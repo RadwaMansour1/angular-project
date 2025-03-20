@@ -3,16 +3,16 @@
         <div class="d-flex flex-column justify-content-between align-items-center w-100">
            <!-- For larger screens -->
             <div class="d-none d-xl-flex justify-content-between align-items-center w-100">
-                <a class="nav-item" routerLink="/cart"> <i class="bi bi-search text-white" aria-current="page"></i> </a>
+                <a class="nav-item"(click)="checkLoginAndNavigate('/cart')"> <i class="bi bi-search text-white" aria-current="page"></i> </a>
 
                 <a routerLink="/" class="navbar-brand fw-semibold ms-5 fs-2 text-white">Logo</a>
                 <div class="d-flex gap-3">
-                    <a class="nav-item"  routerLink="/profile">
+                    <a class="nav-item"  (click)="checkLoginAndNavigate('/profile')">
                         <i class="bi bi-person-fill fs-5 text-white"></i>
                     </a>
                     <a routerLink="/login" class="nav-link text-white" aria-current="page">Login</a>
                     <div class="vr bg-white"></div>
-                    <a class="nav-item" routerLink="/cart"> 
+                    <a class="nav-item" (click)="checkLoginAndNavigate('/cart')"> 
                         <i class="bi bi-cart fs-5 text-white"></i> 
                      @if(counter>0){
                         <span class="badge bg-danger rounded-circle translate-middle p-1 small-badge "> 
@@ -21,7 +21,7 @@
                         </span>
                      }
                     </a>
-                    <a class="nav-item" routerLink="/favorites"> <i class="bi bi-heart fs-5 text-white"></i> 
+                    <a class="nav-item" (click)="checkLoginAndNavigate('/favorites')"> <i class="bi bi-heart fs-5 text-white"></i> 
                         @if(favcounter>0){
                             <span class="badge bg-danger rounded-circle translate-middle p-1 small-badge "> 
                                 {{favcounter}} 
@@ -36,17 +36,17 @@
                 <div class="d-flex align-items-center justify-content-between w-100">
                     <button class="btn btn-outline-light d-xl-none" (click)="toggleSidebar()">☰</button>
                     <a class="fs-1 nav-link fw-semibold text-white" routerLink="/home">Logo</a>
-                    <a class="nav-item"  routerLink="/profile">
+                    <a class="nav-item"  (click)="checkLoginAndNavigate('/profile')">
                         <i class="bi bi-person-fill fs-5 text-white"></i>
                     </a>
-                    <a class="nav-item" routerLink="/cart"> <i class="bi bi-cart fs-5 text-white"></i>
+                    <a class="nav-item" (click)="checkLoginAndNavigate('/cart')"> <i class="bi bi-cart fs-5 text-white"></i>
                         @if(counter>0){
                             <span class="badge bg-danger rounded-circle translate-middle p-1 small-badge "> 
                                 {{counter}} 
     
                             </span>
                          } </a>
-                    <a class="nav-item" routerLink="/favorites"> <i class="bi bi-heart fs-5 text-white"></i> 
+                    <a class="nav-item" (click)="checkLoginAndNavigate('/favorites')"> <i class="bi bi-heart fs-5 text-white"></i> 
                         @if(favcounter>0){
                             <span class="badge bg-danger rounded-circle translate-middle p-1 small-badge "> 
                                 {{favcounter}} 

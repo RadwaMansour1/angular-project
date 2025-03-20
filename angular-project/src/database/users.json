@@ -102,15 +102,11 @@
       "phone": "01039978125",
       "favorites": [
         "103",
-        "501"
+        "504"
       ],
       "gender": "male",
       "address": "789 str",
       "cart": [
-        {
-          "productId": "102",
-          "quantity": 1
-        },
         {
           "productId": "105",
           "quantity": 1

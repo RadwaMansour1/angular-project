@@ -24,3 +24,18 @@ input{
     width: 120px;
     border-radius: 50%;
 }
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    background-color: black; /* Bootstrap primary color */
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-transform: uppercase;
+    user-select: none;
+}
