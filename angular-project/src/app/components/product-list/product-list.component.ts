@@ -5,9 +5,10 @@ import { FavoriteService } from '../../services/favorite.service';
 import { UsersService } from '../../services/users.service';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faHeart, faStar, faEye } from '@fortawesome/free-solid-svg-icons';
+import { faHeart, faStar, faEye,faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { FormsModule } from '@angular/forms';
 import { Product } from '../../models/product.model';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-product-list',
@@ -21,6 +22,7 @@ export class ProductListComponent implements OnInit {
   favoriteProductIds: string[] = [];
   categoryName: string = '';
   faHeart = faHeart;
+  faShoppingCart = faShoppingCart;
   faStar = faStar;
   faEye = faEye;
   selectedSort: string = 'popular';
@@ -30,6 +32,7 @@ export class ProductListComponent implements OnInit {
     private route: ActivatedRoute,
     private productService: ProductService,
     private favoriteService: FavoriteService,
+    private cartService: CartService,
     private usersService: UsersService,
     private router: Router
   ) {}
@@ -115,6 +118,24 @@ export class ProductListComponent implements OnInit {
 
   isFavorite(productId: string): boolean {
     return this.favoriteProductIds.includes(productId);
+  }
+
+
+  addToCart(product: Product, event: Event): void {
+    event.stopPropagation();
+
+    if (!this.userId) {
+      console.warn("User is not logged in!");
+      return;
+    }
+
+    this.cartService.addToCart(this.userId, product.id, 1)
+      .then(() => {
+        console.log("Added to cart:", product);
+      })
+      .catch(error => {
+        console.error("Error adding to cart:", error);
+      });
   }
 }
 

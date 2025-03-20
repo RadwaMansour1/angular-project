@@ -4,7 +4,8 @@ import { ProductService } from '../../services/product.service';
 import { CommonModule } from '@angular/common';
 import { faHeart, faStar } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-// import { CartService } from '../../services/cart.service';
+import { UsersService } from '../../services/users.service';
+import { CartService } from '../../services/cart.service';
 import { Router } from '@angular/router';
 import { Product } from '../../models/product.model';
 
@@ -31,7 +32,8 @@ export class ProductDetailsComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private productService: ProductService,
-    // private cartService: CartService
+    private userService: UsersService,
+    private cartService: CartService
   ) {}
 
   ngOnInit() {
@@ -71,10 +73,23 @@ export class ProductDetailsComponent implements OnInit {
     this.isFavorite = !this.isFavorite;
   }
 
-  // addToCart() {
-  //   if (!this.product) return;
-  //   this.cartService.addToCart(this.product, this.quantity);
-  //   this.router.navigate(['/my-cart']);
-  // }
+  addToCart() {
+    if (!this.product) return;
+
+    const user = this.userService.user;
+    if (!user || !user.id) {
+      alert('Please log in to add items to your cart.');
+      return;
+    }
+
+    this.cartService.addToCart(user.id, this.product.id.toString(), this.quantity)
+      .then(() => {
+        alert(`${this.quantity} ${this.product.name}(s) added to your cart!`);
+      })
+      .catch((error) => {
+        console.error('Error adding to cart:', error);
+        alert('Failed to add to cart. Please try again.');
+      });
+  }
 
 }
