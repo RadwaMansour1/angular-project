@@ -13,6 +13,8 @@ import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { FavoriteComponent } from './components/favorite/favorite.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { SupportComponent } from './components/support/support.component';
 
 export const routes: Routes = [
   {path:"", component:HomeComponent, title:"Home"},
@@ -25,11 +27,13 @@ export const routes: Routes = [
   {path:'payment',component:PaymentComponent},
   {path:"login" ,component:LoginComponent},
   {path:"register",component:RegisterComponent},
+  {path:'support', component: SupportComponent},
   {path:"profile" ,component:ProfileComponent,title:"profile" ,children:[
     {path:"" ,redirectTo:"accountInfo" ,pathMatch:"full"},
     {path:"ordersHistory" ,component:OrdersHistoryComponent, title:"orders history"},
     {path:"accountInfo" ,component:AccountInfoComponent, title:"account info"},
-]}
+]},
+  {path: "**", component: NotFoundComponent}
 ];
 
 
