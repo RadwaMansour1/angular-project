@@ -16,7 +16,7 @@
       "id": "3",
       "code": "COUPON7G8H9I",
       "discount": 25,
-      "valid": false
+      "valid": true
     },
     {
       "id": "4",
@@ -28,37 +28,37 @@
       "id": "5",
       "code": "COUPONM4N5O6",
       "discount": 75,
-      "valid": false
+      "valid": true
     },
     {
       "id": "6",
       "code": "COUPONP7Q8R9",
       "discount": 60,
-      "valid": false
+      "valid": true
     },
     {
       "id": "7",
       "code": "COUPONS1T2U3",
       "discount": 45,
-      "valid": false
+      "valid": true
     },
     {
       "id": "8",
       "code": "COUPONV4W5X6",
       "discount": 80,
-      "valid": false
+      "valid": true
     },
     {
       "id": "9",
       "code": "COUPONY7Z8A9",
       "discount": 35,
-      "valid": false
+      "valid": true
     },
     {
       "id": "10",
       "code": "COUPONB1C2D3",
       "discount": 20,
-      "valid": false
+      "valid": true
     },
     {
       "id": "11",

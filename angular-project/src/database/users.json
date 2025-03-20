@@ -45,7 +45,7 @@
               "quantity": 2
             }
           ],
-          "totalPrice": 61000,
+          "totalPrice": 99000,
           "status": "Delivered",
           "date": "2024-05-01"
         }
@@ -106,7 +106,20 @@
       ],
       "gender": "male",
       "address": "789 str",
-      "cart": [],
+      "cart": [
+        {
+          "productId": "102",
+          "quantity": 1
+        },
+        {
+          "productId": "105",
+          "quantity": 1
+        },
+        {
+          "productId": "103",
+          "quantity": 1
+        }
+      ],
       "orders": [
         {
           "orderId": "5555",
@@ -120,7 +133,7 @@
               "quantity": 2
             }
           ],
-          "totalPrice": 85000,
+          "totalPrice": 135000,
           "status": "p",
           "date": "March 18, 2025 at 01:43:27 AM"
         },
@@ -136,7 +149,7 @@
               "quantity": 2
             }
           ],
-          "totalPrice": 85000,
+          "totalPrice": 78000,
           "status": "p",
           "date": "March 18, 2025 at 01:43:27 AM"
         }
