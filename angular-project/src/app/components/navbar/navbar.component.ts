@@ -11,11 +11,13 @@ import { UsersService } from '../../services/users.service';
 export class NavbarComponent implements OnInit{
 
   counter:number=0
+  favcounter:number=0
   constructor(private userService: UsersService) {
    
   }
   ngOnInit(): void {
-     this.counter= this.userService.user.cart.length
+     this.counter= this.userService.user.cart.length;
+      this.favcounter= this.userService.user.favorites.length;
 
   }
  
