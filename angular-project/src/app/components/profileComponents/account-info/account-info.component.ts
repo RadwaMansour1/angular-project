@@ -59,7 +59,7 @@ export class AccountInfoComponent {
 
   handleLogOut() {
     localStorage.removeItem("currentUser");
-    this.userService.user = null;
+    this.userService.user
     this.routetr.navigate(["/login"]).then(() => {
       window.location.reload();
     });
