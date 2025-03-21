@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 })
 export class StaffSliderComponent {
   staffList =[
-    {name: 'Ahmed Mohammed', image: '', position: 'Front-End Developer'},
+    {name: 'Ahmed Moustafa', image: '', position: 'Front-End Developer'},
     {name: 'Omar El Sayed', image: '', position: 'Front-End Developer'},
     {name: 'Radwa Mansour', image: '', position: 'Front-End Developer'},
     {name: 'Reem Ayman', image: '', position: 'Front-End Developer'},
