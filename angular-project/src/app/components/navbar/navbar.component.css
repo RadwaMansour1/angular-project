@@ -43,6 +43,6 @@ input::placeholder{
 }
 
 .active{
-    border: 0.5px solid white;
-    border-radius: 30px;
+    border-bottom: 0.5px solid white;
+    
 }
